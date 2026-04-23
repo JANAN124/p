@@ -30,13 +30,13 @@
 
 ---
 
-## 📝 Descripción General
+## 🛠️ Resumen del Proyecto
 
 Este repositorio documenta el desarrollo de las actividades del curso de **Robótica 2026-I** de la Universidad Nacional de Colombia. Comprende informes de laboratorio, código fuente, simulaciones y evidencias de los experimentos realizados con distintas plataformas robóticas industriales y de desarrollo.
 
 ---
 
-## 📌 Objetivos del Repositorio
+## 🎓 Objetivos Académicos
 
 - Organizar y documentar el desarrollo de los laboratorios del curso.
 - Registrar procedimientos, resultados y evidencias experimentales.
@@ -45,9 +45,9 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 
 ---
 
-## 👨‍💻 Equipo de Trabajo
+## 🤝 Equipo de Trabajo
 
-### 🔹 Integrante 1
+### 👤 Integrante 1
 
 <div align="center">
   <img src="Imágenes/Foto_janan.jpeg" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br>
@@ -60,13 +60,13 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Correo** | jacarrenor@unal.edu.co |
 | **GitHub** | [@JananLC](https://github.com/JananLC) |
 | **Rol** | Programación y simulación |
-| **Intereses** | [Modificar intereses aquí] |
+| **Intereses** | [Próximamente] |
 
-> [Modificar breve descripción aquí]
+> [Descripción breve próximamente]
 
 ---
 
-### 🔹 Integrante 2
+### 👤 Integrante 2
 
 <div align="center">
   <img src="Imágenes/Foto_cristian.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br>
@@ -78,14 +78,14 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Carrera** | Ingeniería Mecatrónica |
 | **Correo** | Crhoyosp@unal.edu.co |
 | **GitHub** | [@Hoyoscristian](https://github.com/Hoyoscristian) |
-| **Rol** | Documentación, pruebas, modelado 3D |
-| **Intereses** | [Modificar intereses aquí] |
+| **Rol** | Documentación, pruebas y modelado 3D |
+| **Intereses** | [Próximamente] |
 
-> [Modificar breve descripción aquí]
+> [Descripción breve próximamente]
 
 ---
 
-### 🔹 Integrante 3
+### 👤 Integrante 3
 
 <div align="center">
   <img src="Imágenes/Foto_zapata.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br>
@@ -98,19 +98,44 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Correo** | jzapatapi@unal.edu.co |
 | **GitHub** | [@jzapatapi](https://github.com/jzapatapi) |
 | **Rol** | Modelado 3D, pruebas y simulación |
-| **Intereses** | [Modificar intereses aquí] |
+| **Intereses** | [Próximamente] |
 
-> [Modificar breve descripción aquí]
+> [Descripción breve próximamente]
 
 ---
 
-## 🚀 Metodología de Trabajo
+## 🖼️ Galería de Evidencias
 
-Para garantizar un desarrollo eficiente de los laboratorios, el equipo ha establecido las siguientes dinámicas:
-- **Control de Versiones:** Uso de Git/GitHub para la integración continua de código y prevención de conflictos en los scripts de ROS y RAPID.
-- **Validación Virtual:** Todas las trayectorias y algoritmos de control pasan por una fase de simulación (RobotStudio, RoboDK o Gazebo/Turtlesim) antes de la ejecución en hardware real.
-- **Documentación Activa:** Levantamiento de datos, toma de evidencias y registro de resultados en tiempo real durante cada sesión práctica.
-- **Trabajo Colaborativo:** Distribución de cargas según el rol de cada integrante, manteniendo la comunicación constante para integrar el modelado, la programación y las pruebas.
+### ✅ Laboratorio 1: Robótica Industrial ABB IRB140
+<div align="center">
+  <img src="Imágenes/Resultado_Lab1.gif" alt="Evidencia Lab 1" width="500px">
+  <p><i>Simulación y ejecución de trayectorias con robot ABB.</i></p>
+</div>
+
+### ⏳ Laboratorio 2: Motoman MH6 y RoboDK
+<div align="center">
+  <p><i>🚧 Evidencias en construcción 🚧</i></p>
+</div>
+
+### ⏳ Laboratorio 3: EPSON T3 401S y EPSON RC+
+<div align="center">
+  <p><i>🚧 Evidencias en construcción 🚧</i></p>
+</div>
+
+### ⏳ Laboratorio 4: ROS Jazzy y Turtlesim
+<div align="center">
+  <p><i>🚧 Evidencias en construcción 🚧</i></p>
+</div>
+
+### ⏳ Laboratorio 5: ROS Jazzy y Phantom Pincher X100
+<div align="center">
+  <p><i>🚧 Evidencias en construcción 🚧</i></p>
+</div>
+
+### ⏳ Laboratorio 6: Control Servovisual
+<div align="center">
+  <p><i>🚧 Evidencias en construcción 🚧</i></p>
+</div>
 
 ---
 
@@ -127,7 +152,7 @@ Para garantizar un desarrollo eficiente de los laboratorios, el equipo ha establ
 
 ---
 
-## ⚖️ Licencia
+## 📜 Licencia
 
 Este repositorio está bajo la licencia especificada en el archivo [LICENSE](./LICENSE).
 
