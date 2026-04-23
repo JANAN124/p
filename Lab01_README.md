@@ -59,7 +59,7 @@ El proyecto requiere la aplicación de conceptos fundamentales de robótica indu
 | Tolerancia máxima en Z | ±10 mm |
 | Tipo de movimiento | Trazo continuo |
 | Posición inicial/final | Home |
-| Decoración requerida | Nombres + figura adicional (corazón) |
+| Decoración requerida | Nombres + figura adicional (Pacman) |
 
 ### 1.2 Descripción de la solución
 
