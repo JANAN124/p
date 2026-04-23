@@ -11,7 +11,7 @@
 
 <h2>Profesores:<br>Pedro Fabián Cárdenas Herrera<br>Manuel Felipe Carranza Montenegro</h2>
 
-<h4>Juan Diego Sáenz Ardila<br>Alejandra Sofia Monroy Socha</h4>
+<h4>Janan Libardo Carreño Riaño<br>Cristian Stiven Hoyos Peralta<br>Jose Andres Zapata Piñeros</h4>
 
 <p>
   <img alt="Ubuntu 24.04 LTS" src="https://img.shields.io/badge/Ubuntu-24.04%20LTS-E95420?logo=ubuntu&logoColor=white">
@@ -30,13 +30,13 @@
 
 ---
 
-## 📋 Descripción
+## 📝 Descripción General
 
 Este repositorio documenta el desarrollo de las actividades del curso de **Robótica 2026-I** de la Universidad Nacional de Colombia. Comprende informes de laboratorio, código fuente, simulaciones y evidencias de los experimentos realizados con distintas plataformas robóticas industriales y de desarrollo.
 
 ---
 
-## 🎯 Objetivos del repositorio
+## 📌 Objetivos del Repositorio
 
 - Organizar y documentar el desarrollo de los laboratorios del curso.
 - Registrar procedimientos, resultados y evidencias experimentales.
@@ -45,72 +45,76 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 
 ---
 
-## 👥 Integrantes del equipo
+## 👨‍💻 Equipo de Trabajo
 
-### Integrante 1
+### 🔹 Integrante 1
 
 <div align="center">
-  <img src="Imágenes/Foto_juan.jpeg" alt="Juan Diego Sáenz" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Imágenes/Foto_janan.jpeg" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br>
 </div>
 
 | Campo | Información |
 |-------|------------|
-| **Nombre** | Juan Diego Sáenz Ardila |
+| **Nombre** | Janan Libardo Carreño Riaño |
 | **Carrera** | Ingeniería Mecatrónica |
-| **Correo** | jsaenza@unal.edu.co |
-| **GitHub** | [@juandiego4334](https://github.com/juandiego4334) |
-| **Rol** | Programación y control |
-| **Intereses** | Física, control de sistemas y robótica |
+| **Correo** | jacarrenor@unal.edu.co |
+| **GitHub** | [@JananLC](https://github.com/JananLC) |
+| **Rol** | Programación y simulación |
+| **Intereses** | [Modificar intereses aquí] |
 
-> Estudiante de Ingeniería Mecatrónica y Física. Le apasionan las aplicaciones de la ingeniería en la física y el desarrollo de sistemas de control.
+> [Modificar breve descripción aquí]
 
 ---
 
-### Integrante 2
+### 🔹 Integrante 2
 
 <div align="center">
-  <img src="Imágenes/Foto_aleja.jpeg" alt="Alejandra Monroy" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Imágenes/Foto_cristian.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br>
 </div>
 
 | Campo | Información |
 |-------|------------|
-| **Nombre** | Alejandra Sofia Monroy Socha |
-| **Carrera** | Ingeniería Mecánica |
-| **Correo** | almonroys@unal.edu.co |
-| **GitHub** | [@Alejaconeja15](https://github.com/Alejaconeja15) |
-| **Rol** | Modelado, manufactura y simulación |
-| **Intereses** | Procesos de manufactura y automatización |
+| **Nombre** | Cristian Stiven Hoyos Peralta |
+| **Carrera** | Ingeniería Mecatrónica |
+| **Correo** | Crhoyosp@unal.edu.co |
+| **GitHub** | [@Hoyoscristian](https://github.com/Hoyoscristian) |
+| **Rol** | Documentación, pruebas, modelado 3D |
+| **Intereses** | [Modificar intereses aquí] |
 
-> Estudiante de Ingeniería Mecánica con interés profundo en procesos de manufactura, optimización y diseño orientado a la manufactura.
-
----
-
-## 🗂️ Estructura del repositorio
-
-```
-📦 Robotica-2026-I-Equipo-2A-Monroy-Saenz
- ┣ 📂 Imágenes/
- ┣ 📂 Laboratorio No. 01 - Robótica Industrial ABB IRB140 y RobotStudio/
- ┃ ┣ 📄 README.md
- ┃ ┣ 📄 Código_RAPID.md
- ┃ ┗ 📂 imagenes/
- ┣ 📂 Laboratorio No. 02 - Robótica Industrial Motoman MH6 y RoboDK/
- ┃ ┗ 📄 README.md
- ┣ 📂 Laboratorio No. 03 - Robótica Industrial EPSON T3 401S y EPSON RC+/
- ┃ ┗ 📄 README.md
- ┣ 📂 Laboratorio No. 04 - Robótica de Desarrollo ROS Jazzy y Turtlesim/
- ┃ ┗ 📄 README.md
- ┣ 📂 Laboratorio No. 05 - Robótica de Desarrollo ROS Jazzy y Phantom Pincher X100/
- ┃ ┗ 📄 README.md
- ┣ 📂 Laboratorio No. 06 - Robótica de Desarrollo ROS Jazzy y Control Servovisual/
- ┃ ┗ 📄 README.md
- ┣ 📄 README.md
- ┗ 📄 LICENSE
-```
+> [Modificar breve descripción aquí]
 
 ---
 
-## 🔬 Laboratorios
+### 🔹 Integrante 3
+
+<div align="center">
+  <img src="Imágenes/Foto_zapata.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br>
+</div>
+
+| Campo | Información |
+|-------|------------|
+| **Nombre** | Jose Andres Zapata Piñeros |
+| **Carrera** | Ingeniería Mecatrónica |
+| **Correo** | jzapatapi@unal.edu.co |
+| **GitHub** | [@jzapatapi](https://github.com/jzapatapi) |
+| **Rol** | Modelado 3D, pruebas y simulación |
+| **Intereses** | [Modificar intereses aquí] |
+
+> [Modificar breve descripción aquí]
+
+---
+
+## 🚀 Metodología de Trabajo
+
+Para garantizar un desarrollo eficiente de los laboratorios, el equipo ha establecido las siguientes dinámicas:
+- **Control de Versiones:** Uso de Git/GitHub para la integración continua de código y prevención de conflictos en los scripts de ROS y RAPID.
+- **Validación Virtual:** Todas las trayectorias y algoritmos de control pasan por una fase de simulación (RobotStudio, RoboDK o Gazebo/Turtlesim) antes de la ejecución en hardware real.
+- **Documentación Activa:** Levantamiento de datos, toma de evidencias y registro de resultados en tiempo real durante cada sesión práctica.
+- **Trabajo Colaborativo:** Distribución de cargas según el rol de cada integrante, manteniendo la comunicación constante para integrar el modelado, la programación y las pruebas.
+
+---
+
+## 🧪 Prácticas de Laboratorio
 
 | # | Laboratorio | Robot | Software | Estado |
 |---|-------------|-------|----------|--------|
@@ -123,7 +127,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 
 ---
 
-## 📄 Licencia
+## ⚖️ Licencia
 
 Este repositorio está bajo la licencia especificada en el archivo [LICENSE](./LICENSE).
 
