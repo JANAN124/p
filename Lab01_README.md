@@ -39,9 +39,9 @@
 
 ### 1.1 Planteamiento del problema
 
-En este laboratorio se desarrolla un sistema automatizado con el manipulador **ABB IRB 140** para la decoración de una torta, sustituyendo un proceso manual por uno programado que garantice mayor precisión, repetibilidad y control. El robot debe ejecutar trayectorias sobre una superficie plana que representa una torta virtual, escribiendo los nombres de los integrantes del equipo y una figura decorativa adicional.
+Este laboratorio aborda la automatización de un proceso inspirado en la industria de alimentos, enfocado específicamente en la decoración de una torta virtual. El objetivo principal es sustituir el trabajo manual por un sistema programado que garantice mayor precisión, control y repetibilidad. Para lograrlo, se emplea un manipulador industrial ABB IRB 140 junto con un controlador IRC5, encargados de ejecutar trayectorias precisas sobre una superficie plana para escribir los nombres de los integrantes del equipo y trazar una figura decorativa, utilizando una herramienta diseñada especialmente para esta tarea.
 
-El sistema también integra el control de una **banda transportadora** mediante entradas y salidas digitales, y requiere el diseño de una herramienta adecuada para la decoración.
+El proyecto requiere la aplicación de conceptos fundamentales de robótica industrial, incluyendo la calibración de herramientas, la programación en lenguaje RAPID y la generación de trayectorias. Asimismo, el sistema integra el uso de entradas y salidas digitales para lograr una coordinación sincronizada entre el robot y una banda transportadora. Todo este entorno de trabajo se modela, analiza y valida previamente mediante el software de simulación RobotStudio, lo que permite asegurar el correcto funcionamiento de los componentes en un entorno virtual antes de su ejecución física.
 
 **Especificaciones y restricciones del sistema:**
 
