@@ -32,16 +32,37 @@
 
 ## Tabla de contenido
 
-1. [Introducción y descripción de la solución](#1-introducción-y-descripción-de-la-solución)
-2. [Diagrama de flujo de acciones del robot](#2-diagrama-de-flujo-de-acciones-del-robot)
-3. [Plano de planta](#3-plano-de-planta)
-4. [Descripción de las funciones utilizadas](#4-descripción-de-las-funciones-utilizadas)
-5. [Lógica y Programación en RAPID](#5-lógica-y-programación-en-rapid)
-6. [Evidencias Multimedia](#6-evidencias-multimedia)
+1. [Introducción](#1-introducción)
+   - [1.1 Planteamiento del problema](#11-planteamiento-del-problema)
+   - [1.2 Descripción general de la solución](#12-descripción-general-de-la-solución)
+2. [Diseño de la herramienta](#2-diseño-de-la-herramienta)
+   - [2.1 Definición y parámetros de la herramienta](#21-definición-y-parámetros-de-la-herramienta)
+   - [2.2 Modelado en Fusion 360 (herramienta + marcador)](#22-modelado-en-fusion-360-herramienta--marcador)
+   - [2.3 Herramienta física montada en el robot](#23-herramienta-física-montada-en-el-robot)
+   - [2.4 Planos de la herramienta](#24-planos-de-la-herramienta)
+3. [Modelado del objeto de trabajo](#3-modelado-del-objeto-de-trabajo)
+   - [3.1 Diseño y medidas de la caja (torta virtual)](#31-diseño-y-medidas-de-la-caja-torta-virtual)
+   - [3.2 Importación a RobotStudio y montaje en la celda](#32-importación-a-robotstudio-y-montaje-en-la-celda)
+4. [Configuración en RobotStudio](#4-configuración-en-robotstudio)
+   - [4.1 Definición del TCP y Wobj](#41-definición-del-tcp-y-wobj)
+   - [4.2 Definición de Targets y trayectorias](#42-definición-de-targets-y-trayectorias)
+5. [Programación en RAPID](#5-programación-en-rapid)
+   - [5.1 Descripción de las funciones utilizadas](#51-descripción-de-las-funciones-utilizadas)
+   - [5.2 Lógica del programa (nombres + Pacman)](#52-lógica-del-programa-nombres--pacman)
+   - [5.3 Código RAPID](#53-código-rapid)
+6. [Automatización y control](#6-automatización-y-control)
+   - [6.1 Smart Components (movimiento de la cinta)](#61-smart-components-movimiento-de-la-cinta)
+   - [6.2 Entradas y salidas digitales (E/S)](#62-entradas-y-salidas-digitales-es)
+   - [6.3 Station Logic y lógica de tablero](#63-station-logic-y-lógica-de-tablero)
+7. [Diagrama de flujo de acciones del robot](#7-diagrama-de-flujo-de-acciones-del-robot)
+8. [Simulación y resultados](#8-simulación-y-resultados)
+   - [8.1 Plano de planta](#81-plano-de-planta)
+   - [8.2 Verificación de la simulación en RobotStudio](#82-verificación-de-la-simulación-en-robotstudio)
+   - [8.3 Resultados obtenidos](#83-resultados-obtenidos)
 
 ---
 
-## 1. Introducción y descripción de la solución
+## 1. Introducción
 
 ### 1.1 Planteamiento del problema
 
@@ -60,11 +81,27 @@ El proyecto requiere la aplicación de conceptos fundamentales de robótica indu
 | Posición inicial/final | Home |
 | Decoración requerida | Nombres + figura adicional (Pacman) |
 
-### 1.2 Descripción de la solución
+### 1.2 Descripción general de la solución
 
-El desarrollo de la solución se ejecutó siguiendo una metodología secuencial, partiendo desde el diseño de los elementos hasta la simulación y posterior validación física:
+El desarrollo de la solución se ejecutó siguiendo una metodología secuencial, partiendo desde el diseño de los elementos hasta la simulación y posterior validación física: diseño de la herramienta y el objeto de trabajo en Fusion 360, configuración del entorno en RobotStudio (TCP, Wobj y Targets), programación en RAPID, implementación de Smart Components y lógica de E/S, y finalmente validación mediante simulación y pruebas físicas con el controlador IRC5.
 
-#### a. Diseño y definición de la herramienta
+---
+
+## 2. Diseño de la herramienta
+
+### 2.1 Definición y parámetros de la herramienta
+
+El primer paso consistió en desarrollar un efector final adaptado a las medidas del flange del ABB IRB 140. **Criterios fundamentales del diseño:**
+
+- **Fijación mecánica** – La herramienta se asegura con **tornillos** al flange del robot, respetando los planos técnicos del IRB 140.
+- **Evitar singularidades** – El eje del marcador **no es colineal** con el eje del flange. Se adoptó una rotación de **45° en el plano horizontal**.
+- **Compensación de errores** – El marcador **no se fija de forma rígida**. Se incorporó un **sistema de resorte** que permite una **tolerancia axial de 20 mm**, absorbiendo desviaciones de calibración o irregularidades de la superficie.
+
+> **Material de fabricación:** PETG (resistencia y durabilidad) mediante impresión 3D.
+
+### 2.2 Modelado en Fusion 360 (herramienta + marcador)
+
+La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión 3D en **PETG**. Una vez lista, la geometría se exportó en formato `.SAT`, permitiendo que RobotStudio la reconociera correctamente para acoplarla al manipulador en el entorno virtual.
 
 <div align="center">
   <img src="imagenes/Herramienta_Vista1.png" alt="Vista isométrica de la herramienta" width="300px">
@@ -72,45 +109,125 @@ El desarrollo de la solución se ejecutó siguiendo una metodología secuencial,
   <img src="imagenes/Herramienta_Vista2.png" alt="Vista lateral de la herramienta" width="300px">
   &nbsp;&nbsp;
   <img src="imagenes/Herramienta_Vista3.png" alt="Detalle del sistema de resorte" width="300px">
-  <br><em>Figura 1. Prototipo de la herramienta de decoración: vista isométrica, lateral y detalle del mecanismo de compensación</em>
+  <br><em>Figura 1. Herramienta de decoración en Fusion 360: vista isométrica, lateral y detalle del mecanismo de compensación</em>
 </div>
 
-El primer paso consistió en desarrollar un efector final adaptado a las medidas del flange del ABB IRB 140. La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión 3D en **PETG**. Una vez lista, la geometría se exportó en formato `.SAT`, lo que permitió que RobotStudio la reconociera correctamente para acoplarla al manipulador en el entorno virtual.
+### 2.3 Herramienta física montada en el robot
 
-Para el diseño se tuvieron en cuenta los siguientes criterios fundamentales:
-- **Fijación al flange**: la herramienta se asegura con tornillos al flange del robot, siguiendo los planos técnicos del manipulador.
-- **Evitar singularidades**: el eje del marcador no puede quedar colineal con el eje del flange; por ello se dispuso una **rotación de 45° en el plano horizontal**.
-- **Absorción de errores de calibración**: el marcador no se sujeta de forma rígida; se incorporó un **sistema de compensación por resorte** que permite una **tolerancia axial de 20 mm**.
+> 📷 *[Foto de la herramienta impresa en 3D montada en el flange del ABB IRB 140]*
 
-Una vez importada la herramienta en RobotStudio, se calibró el **Tool Center Point (TCP)** con los siguientes valores:
+### 2.4 Planos de la herramienta
 
-| Parámetro | Valor |
-|-----------|-------|
-| Traslación (tframe) | X = 85.45 mm, Y = -1.13 mm, Z = 118.934 mm |
-| Orientación (cuaternión) | [0.866, 0, 0.5, 0] (equivalente a 45° sobre el eje X) |
-| Masa estimada | 1 kg |
+> 📐 *[Espacio reservado para los planos técnicos de la herramienta (vistas, cotas y tolerancias)]*
 
-Estos datos se almacenaron en el `tooldata` llamado `Marcador`, que se activa durante todas las rutinas de trazado.
+---
 
-#### b. Modelado del objeto de trabajo (Torta virtual)
-Posteriormente, se diseñó la caja que representa la superficie de la torta. Al igual que la herramienta, este elemento se modeló en **Autodesk Fusion 360** para asegurar las proporciones correctas. Sobre este espacio virtual se planificó la distribución geométrica para el trazado de los tres nombres de los integrantes del equipo y la figura de un **Pacman**.
+## 3. Modelado del objeto de trabajo
+
+### 3.1 Diseño y medidas de la caja (torta virtual)
+
+Se diseñó la caja que representa la superficie de la torta en **Autodesk Fusion 360** para asegurar las proporciones correctas. Sobre este espacio virtual se planificó la distribución geométrica para el trazado de los tres nombres de los integrantes del equipo y la figura de un **Pacman**.
+
+> 📷 *[Foto de la caja física con sus medidas indicadas]*
 
 <div align="center">
   <img src="imagenes/Plano pastel-1.png" alt="Plano del pastel" width="600px">
   <br><em>Figura 2. Plano de distribución de trayectorias sobre el pastel</em>
 </div>
 
-#### c. Configuración de parámetros fundamentales (TCP, Wobj y Targets)
-Con la herramienta y el objeto de trabajo posicionados, se procedió a configurar la base del control espacial:
+### 3.2 Importación a RobotStudio y montaje en la celda
+
+Con los modelos listos en Fusion 360, tanto la herramienta como la caja se exportaron en formato `.SAT` e importaron a RobotStudio, donde se posicionaron correctamente en la celda de manufactura virtual.
+
+> 📷 *[Foto de la herramienta acoplada al robot y la caja posicionada en la banda, dentro de RobotStudio]*
+
+---
+
+## 4. Configuración en RobotStudio
+
+### 4.1 Definición del TCP y Wobj
+
+Con la herramienta y el objeto de trabajo posicionados, se configuró la base del control espacial:
 - Se definió el **TCP** (Tool Center Point) virtual asociado a la punta del marcador.
 - Se creó el sistema de coordenadas de la pieza o **Workobject** alineado con la caja.
-- Se programaron los *Targets* (puntos de destino) y las trayectorias para asegurar que el robot trazara los caracteres y el Pacman con la interpolación adecuada.
 
-#### d. Implementación de Smart Components
+| Dato | Tipo | Descripción |
+|------|------|-------------|
+| `Marcador` | `tooldata` | Define el TCP y masa de la herramienta activa (marcador adaptado). |
+| `Pastel` | `wobjdata` | Define el sistema de coordenadas del objeto de trabajo (superficie de la torta). |
+
+### 4.2 Definición de Targets y trayectorias
+
+Se programaron los *Targets* (puntos de destino) y las trayectorias para asegurar que el robot trazara los caracteres y el Pacman con la interpolación adecuada, verificando que no hubiera colisiones ni singularidades en ninguno de los movimientos.
+
+---
+
+## 5. Programación en RAPID
+
+### 5.1 Descripción de las funciones utilizadas
+
+A continuación se describen las instrucciones de movimiento RAPID empleadas en el desarrollo de la práctica:
+
+#### Instrucciones de movimiento
+
+| Función | Descripción | Uso en el laboratorio |
+|---------|-------------|----------------------|
+| `MoveJ` | Movimiento en espacio de juntas (joint space). El robot elige la ruta más directa articulación por articulación. | Desplazamientos rápidos entre posiciones alejadas (Home, puntos previos). |
+| `MoveL` | Movimiento lineal en espacio cartesiano. El TCP se desplaza en línea recta. | Trazado de segmentos rectos en las letras. |
+| `MoveC` | Movimiento circular en espacio cartesiano. Requiere punto intermedio y punto final. | Trazado de curvas y arcos (letras A, C, D, E, J, N, U y contorno de la figura de Pacman). |
+
+#### Parámetros de velocidad y zona
+
+| Parámetro | Valor | Descripción |
+|-----------|-------|-------------|
+| `v100` | 100 mm/s | Velocidad de ejecución de todas las trayectorias (requerimiento del laboratorio). |
+| `z10` | 10 mm | Zona de suavizado general. El robot no para exactamente en el punto, suaviza la trayectoria con radio 10 mm. |
+| `z1` | 1 mm | Zona de suavizado reducida, usada en esquinas pronunciadas (ej: bordes de la boca del Pacman) para mayor precisión. |
+| `z100` | 100 mm | Zona amplia usada en el movimiento Home para un retorno fluido. |
+
+#### Instrucciones de E/S digitales
+
+| Función | Descripción |
+|---------|-------------|
+| `SET <señal>` | Activa (pone en 1) una salida digital. |
+| `RESET <señal>` | Desactiva (pone en 0) una salida digital. |
+| `WaitTime <t>` | Pausa la ejecución durante `t` segundos. |
+| `IF DI_XX = 1 THEN` | Evaluación condicional de una entrada digital. |
+
+### 5.2 Lógica del programa (nombres + Pacman)
+
+Toda la secuencia de trayectorias y el control de E/S se estructuraron bajo un enfoque de programación modular. El programa principal ejecuta las rutinas de escritura de los tres nombres de los integrantes y finaliza con el trazado de la figura de Pacman, retornando siempre a la posición Home al terminar.
+
+### 5.3 Código RAPID
+
+👉 **[Consultar Código_RAPID.md](./Código_RAPID.md)**
+
+---
+
+## 6. Automatización y control
+
+### 6.1 Smart Components (movimiento de la cinta)
+
 Para dotar de realismo a la simulación y emular el proceso de una línea de producción, se configuraron **Smart Components** en RobotStudio. Estos componentes inteligentes permitieron simular la cinemática de la caja desplazándose sobre la banda transportadora, reflejando el comportamiento que tendría el sistema en la vida real.
 
-#### e. Lógica de Entradas y Salidas (E/S) y Station Logic
+### 6.2 Entradas y salidas digitales (E/S)
+
+#### Señales digitales definidas
+
+| Señal | Tipo | Función |
+|-------|------|---------|
+| `DI_01` | Entrada | Inicia el ciclo principal (ejecuta el código RAPID). |
+| `DI_02` | Entrada | Envía el robot a posición de mantenimiento. |
+| `DI_03` | Entrada | Mueve la banda en reversa para posicionar el pastel a punto. |
+| `DI_02` + `DI_03` | Entradas | Pulsadas al tiempo, envían el robot a posición *Home*. |
+| `DO_01` | Salida | Indicador de ejecución de rutina principal / control hacia el Smart Component. |
+| `DO_02` | Salida | Indicador de modo mantenimiento. |
+| `DO_03` | Salida | Control del Smart Component para el movimiento en reversa. |
+
+### 6.3 Station Logic y lógica de tablero
+
 La coordinación entre el manipulador y los Smart Components de la banda transportadora se logró mediante la configuración de señales digitales interconectadas en el entorno de *Station Logic*. La arquitectura de control quedó definida de la siguiente manera:
+
 - **`DI_01`**: Inicia el ciclo principal, ejecutando el código RAPID.
 - **`DI_02`**: Posiciona el robot en postura de mantenimiento.
 - **`DI_03`**: Activa la banda en reversa para dejar el pastel "a punto" en la posición de inicio.
@@ -121,12 +238,9 @@ La coordinación entre el manipulador y los Smart Components de la banda transpo
   <br><em>Figura 3. Diagrama de bloques de la Station Logic interconectando entradas, controlador y Smart Components</em>
 </div>
 
-#### f. Simulación Final y Pruebas Físicas
-Finalmente, se ejecutó la simulación completa comprobando que los Smart Components, las E/S y las trayectorias interactuaran sin colisiones ni errores. Una vez validado, el código fue transferido al controlador IRC5 físico, donde se realizaron ajustes menores del Workobject debido a las tolerancias de ubicación de la banda transportadora real.
-
 ---
 
-## 2. Diagrama de flujo de acciones del robot
+## 7. Diagrama de flujo de acciones del robot
 
 <div align="center">
   <img src="imagenes/Diagrama_flujo.png" alt="Diagrama de flujo" width="480px">
@@ -152,7 +266,9 @@ Inicio
 
 ---
 
-## 3. Plano de planta
+## 8. Simulación y resultados
+
+### 8.1 Plano de planta
 
 <div align="center">
   <img src="imagenes/Plano Montaje Lab 1-1.png" alt="Plano de planta" width="850px">
@@ -164,94 +280,23 @@ El plano muestra la distribución espacial de los elementos del sistema:
 - **Banda transportadora**: ubicada a un lado del robot, con su eje longitudinal perpendicular al alcance frontal del robot.
 - **Zona de decoración (pastel)**: área de trabajo accesible dentro del espacio de trabajo del robot.
 
----
+### 8.2 Verificación de la simulación en RobotStudio
 
-## 4. Descripción de las funciones utilizadas
+Se ejecutó la simulación completa comprobando que los Smart Components, las E/S y las trayectorias interactuaran sin colisiones ni errores.
 
-A continuación se describen las instrucciones de movimiento RAPID empleadas en el desarrollo de la práctica:
+> 🎥 *[Video de la simulación del gemelo digital en RobotStudio]*
 
-### 4.1 Instrucciones de movimiento
+### 8.3 Resultados obtenidos
 
-| Función | Descripción | Uso en el laboratorio |
-|---------|-------------|----------------------|
-| `MoveJ` | Movimiento en espacio de juntas (joint space). El robot elige la ruta más directa articulación por articulación. | Desplazamientos rápidos entre posiciones alejadas (Home, puntos previos). |
-| `MoveL` | Movimiento lineal en espacio cartesiano. El TCP se desplaza en línea recta. | Trazado de segmentos rectos en las letras. |
-| `MoveC` | Movimiento circular en espacio cartesiano. Requiere punto intermedio y punto final. | Trazado de curvas y arcos (letras A, C, D, E, J, N, U y contorno de la figura de Pacman). |
+Una vez validado en simulación, el código fue transferido al controlador IRC5 físico, donde se realizaron ajustes menores del Workobject debido a las tolerancias de ubicación de la banda transportadora real.
 
-### 4.2 Parámetros de velocidad y zona
-
-| Parámetro | Valor | Descripción |
-|-----------|-------|-------------|
-| `v100` | 100 mm/s | Velocidad de ejecución de todas las trayectorias (requerimiento del laboratorio). |
-| `z10` | 10 mm | Zona de suavizado general. El robot no para exactamente en el punto, suaviza la trayectoria con radio 10 mm. |
-| `z1` | 1 mm | Zona de suavizado reducida, usada en esquinas pronunciadas (ej: bordes de la boca del Pacman) para mayor precisión. |
-| `z100` | 100 mm | Zona amplia usada en el movimiento Home para un retorno fluido. |
-
-### 4.3 Instrucciones de E/S digitales
-
-| Función | Descripción |
-|---------|-------------|
-| `SET <señal>` | Activa (pone en 1) una salida digital. |
-| `RESET <señal>` | Desactiva (pone en 0) una salida digital. |
-| `WaitTime <t>` | Pausa la ejecución durante `t` segundos. |
-| `IF DI_XX = 1 THEN` | Evaluación condicional de una entrada digital. |
-
-### 4.4 Señales digitales definidas
-
-| Señal | Tipo | Función |
-|-------|------|---------|
-| `DI_01` | Entrada | Inicia el ciclo principal (ejecuta el código RAPID). |
-| `DI_02` | Entrada | Envía el robot a posición de mantenimiento. |
-| `DI_03` | Entrada | Mueve la banda en reversa para posicionar el pastel a punto. |
-| `DI_02` + `DI_03` | Entradas | Pulsadas al tiempo, envían el robot a posición *Home*. |
-| `DO_01` | Salida | Indicador de ejecución de rutina principal / control hacia el Smart Component. |
-| `DO_02` | Salida | Indicador de modo mantenimiento. |
-| `DO_03` | Salida | Control del Smart Component para el movimiento en reversa. |
-
-### 4.5 Datos de herramienta y workobject
-
-| Dato | Tipo | Descripción |
-|------|------|-------------|
-| `Marcador` | `tooldata` | Define el TCP y masa de la herramienta activa (marcador adaptado). |
-| `Pastel` | `wobjdata` | Define el sistema de coordenadas del objeto de trabajo (superficie de la torta). |
-
----
-
-## 5. Lógica y Programación en RAPID
-
-Toda la secuencia de trayectorias y el control de E/S se estructuraron bajo un enfoque de programación modular. El script principal puede consultarse en su archivo respectivo:
-
-👉 **[Consultar Código_RAPID.md](./Código_RAPID.md)**
-
-### 5.1 Arquitectura del Software
-
-El código fuente está fragmentado en submódulos especializados para optimizar su lectura y facilitar la corrección de puntos:
-
-* **Variables de Entorno:** Declaración global de las herramientas (`tooldata`) y sistemas de referencia (`wobjdata`), junto con todos los `robtargets`.
-* **Núcleo de Ejecución:** El procedimiento `PROC main()` aloja la máquina de estados y las condiciones de evaluación (DI/DO) para interactuar con la banda transportadora y gestionar el ciclo, home y mantenimiento.
-* **Desplazamientos de Seguridad:** Subrutinas `Path_Home()` para la postura neutral y `Path_Mantenimiento()` para la posición segura de inspección.
-* **Trazado de Caracteres:** Se implementó una subrutina dedicada a cada letra específica que conforma los nombres requeridos (por ejemplo, `Path_A_1()`, `Path_J()`, `Path_N_1()`, etc.).
-* **Elemento Gráfico:** La rutina `Path_10()` agrupa el movimiento complejo encargado de dibujar el Pacman.
-
-### 5.2 Criterios de Movimiento
-
-* **Dinámica Unificada:** Se garantizó una velocidad constante de `v100` (100 mm/s) durante el contacto con la torta para mantener el flujo del marcador.
-* **Interpolación de Zonas:** Se implementó un radio de empalme `z10` en transiciones largas para dar fluidez al brazo, pero se forzó una zona estricta de `z1` en esquinas críticas (como los vértices de las letras o los ángulos agudos de la boca del Pacman) para no redondear la geometría esperada.
-
----
-
-## 6. Evidencias Multimedia
-
-En este apartado se compilan los registros visuales que certifican el desempeño de las trayectorias programadas.
-
-### 6.1 Validación Virtual
-> 🎥 *[Espacio reservado para anexar el video del gemelo digital en RobotStudio]*
-
-### 6.2 Validación Física
-> 🎥 *[Espacio reservado para anexar la ejecución real con el hardware en el laboratorio]*
+> 🎥 *[Video de la ejecución real con el hardware en el laboratorio]*
+>
+> 📷 *[Fotos del resultado físico: torta decorada con los nombres y el Pacman]*
 
 ---
 
 <div align="center">
   <sub>← <a href="../README.md">Volver al repositorio principal</a> | <a href="./Código_RAPID.md">Ver código RAPID completo →</a></sub>
 </div>
+
