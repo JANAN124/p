@@ -36,9 +36,8 @@
 2. [Diagrama de flujo de acciones del robot](#2-diagrama-de-flujo-de-acciones-del-robot)
 3. [Plano de planta](#3-plano-de-planta)
 4. [Descripción de las funciones utilizadas](#4-descripción-de-las-funciones-utilizadas)
-5. [Arquitectura y Modelado de la Herramienta](#5-arquitectura-y-modelado-de-la-herramienta)
-6. [Lógica y Programación en RAPID](#6-lógica-y-programación-en-rapid)
-7. [Evidencias Multimedia](#7-evidencias-multimedia)
+5. [Lógica y Programación en RAPID](#5-lógica-y-programación-en-rapid)
+6. [Evidencias Multimedia](#6-evidencias-multimedia)
 
 ---
 
@@ -66,14 +65,39 @@ El proyecto requiere la aplicación de conceptos fundamentales de robótica indu
 El desarrollo de la solución se ejecutó siguiendo una metodología secuencial, partiendo desde el diseño de los elementos hasta la simulación y posterior validación física:
 
 #### a. Diseño y definición de la herramienta
+
+<div align="center">
+  <img src="imagenes/Herramienta_Vista1.png" alt="Vista isométrica de la herramienta" width="300px">
+  &nbsp;&nbsp;
+  <img src="imagenes/Herramienta_Vista2.png" alt="Vista lateral de la herramienta" width="300px">
+  &nbsp;&nbsp;
+  <img src="imagenes/Herramienta_Vista3.png" alt="Detalle del sistema de resorte" width="300px">
+  <br><em>Figura 1. Prototipo de la herramienta de decoración: vista isométrica, lateral y detalle del mecanismo de compensación</em>
+</div>
+
 El primer paso consistió en desarrollar un efector final adaptado a las medidas del flange del ABB IRB 140. La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión 3D en **PETG**. Una vez lista, la geometría se exportó en formato `.SAT`, lo que permitió que RobotStudio la reconociera correctamente para acoplarla al manipulador en el entorno virtual.
+
+Para el diseño se tuvieron en cuenta los siguientes criterios fundamentales:
+- **Fijación al flange**: la herramienta se asegura con tornillos al flange del robot, siguiendo los planos técnicos del manipulador.
+- **Evitar singularidades**: el eje del marcador no puede quedar colineal con el eje del flange; por ello se dispuso una **rotación de 45° en el plano horizontal**.
+- **Absorción de errores de calibración**: el marcador no se sujeta de forma rígida; se incorporó un **sistema de compensación por resorte** que permite una **tolerancia axial de 20 mm**.
+
+Una vez importada la herramienta en RobotStudio, se calibró el **Tool Center Point (TCP)** con los siguientes valores:
+
+| Parámetro | Valor |
+|-----------|-------|
+| Traslación (tframe) | X = 85.45 mm, Y = -1.13 mm, Z = 118.934 mm |
+| Orientación (cuaternión) | [0.866, 0, 0.5, 0] (equivalente a 45° sobre el eje X) |
+| Masa estimada | 1 kg |
+
+Estos datos se almacenaron en el `tooldata` llamado `Marcador`, que se activa durante todas las rutinas de trazado.
 
 #### b. Modelado del objeto de trabajo (Torta virtual)
 Posteriormente, se diseñó la caja que representa la superficie de la torta. Al igual que la herramienta, este elemento se modeló en **Autodesk Fusion 360** para asegurar las proporciones correctas. Sobre este espacio virtual se planificó la distribución geométrica para el trazado de los tres nombres de los integrantes del equipo y la figura de un **Pacman**.
 
 <div align="center">
   <img src="imagenes/Plano pastel-1.png" alt="Plano del pastel" width="600px">
-  <br><em>Figura 1. Plano de distribución de trayectorias sobre el pastel</em>
+  <br><em>Figura 2. Plano de distribución de trayectorias sobre el pastel</em>
 </div>
 
 #### c. Configuración de parámetros fundamentales (TCP, Wobj y Targets)
@@ -94,7 +118,7 @@ La coordinación entre el manipulador y los Smart Components de la banda transpo
 
 <div align="center">
   <img src="imagenes/Logica_Estacion.png" alt="Lógica de la Estación en RobotStudio" width="800px">
-  <br><em>Figura 2. Diagrama de bloques de la Station Logic interconectando entradas, controlador y Smart Components</em>
+  <br><em>Figura 3. Diagrama de bloques de la Station Logic interconectando entradas, controlador y Smart Components</em>
 </div>
 
 #### f. Simulación Final y Pruebas Físicas
@@ -106,7 +130,7 @@ Finalmente, se ejecutó la simulación completa comprobando que los Smart Compon
 
 <div align="center">
   <img src="imagenes/Diagrama_flujo.png" alt="Diagrama de flujo" width="480px">
-  <br><em>Figura 3. Diagrama de flujo del programa principal del robot</em>
+  <br><em>Figura 4. Diagrama de flujo del programa principal del robot</em>
 </div>
 
 El flujo de ejecución sigue la lógica de un bucle infinito (`WHILE TRUE`) que evalúa las entradas digitales y sus combinaciones:
@@ -132,7 +156,7 @@ Inicio
 
 <div align="center">
   <img src="imagenes/Plano Montaje Lab 1-1.png" alt="Plano de planta" width="850px">
-  <br><em>Figura 4. Plano de planta con la ubicación del robot, banda transportadora y zona de trabajo</em>
+  <br><em>Figura 5. Plano de planta con la ubicación del robot, banda transportadora y zona de trabajo</em>
 </div>
 
 El plano muestra la distribución espacial de los elementos del sistema:
@@ -193,38 +217,13 @@ A continuación se describen las instrucciones de movimiento RAPID empleadas en 
 
 ---
 
-## 5. Arquitectura y Modelado de la Herramienta
-
-<div align="center">
-  <img src="imagenes/Herramienta_Vista1.png" alt="Vista isométrica de la herramienta" width="350px">
-  &nbsp;&nbsp;
-  <img src="imagenes/Herramienta_Vista2.png" alt="Vista lateral de la herramienta" width="350px">
-  <br><em>Figura 5. Vistas y prototipo de la herramienta de decoración diseñada en Fusion 360</em>
-</div>
-
-### 5.1 Parámetros y Fabricación
-
-Para llevar a cabo la tarea de trazado continuo sobre el objeto de trabajo, se desarrolló un efector final a medida empleando **Autodesk Fusion 360**. La pieza se materializó utilizando técnicas de manufactura aditiva, específicamente impresa en filamento **PETG** para garantizar mayor resistencia mecánica. Los datos técnicos integrados en el controlador para establecer el Tool Center Point (TCP) son los siguientes:
-
-* **Coordenadas Cartesianas (TCP):** X = 85.45 mm | Y = -1.13 mm | Z = 118.934 mm
-* **Cuaternión de Orientación:** [0.866, 0, 0.5, 0] (Equivalente a una inclinación de aproximadamente 30° sobre el eje X)
-* **Masa estimada:** 1 kg.
-
-### 5.2 Criterios de Ingeniería
-
-* **Interfaz de montaje y compatibilidad:** Se respetaron rigurosamente las medidas del flange mecánico documentadas en el datasheet oficial del ABB IRB 140. La pieza exportada en formato `.SAT` facilitó la integración perfecta en RobotStudio.
-* **Sistema de fijación:** Incorpora una cavidad de acople con un mecanismo de sujeción a presión que estabiliza el marcador durante las rutas.
-* **Aproximación angular:** La configuración a 30 grados frente al eje vertical resultó ser un factor clave de diseño para mejorar el alcance (reachability), evitar singularidades y prevenir colisiones entre la muñeca del robot y la superficie horizontal de la torta.
-
----
-
-## 6. Lógica y Programación en RAPID
+## 5. Lógica y Programación en RAPID
 
 Toda la secuencia de trayectorias y el control de E/S se estructuraron bajo un enfoque de programación modular. El script principal puede consultarse en su archivo respectivo:
 
 👉 **[Consultar Código_RAPID.md](./Código_RAPID.md)**
 
-### 6.1 Arquitectura del Software
+### 5.1 Arquitectura del Software
 
 El código fuente está fragmentado en submódulos especializados para optimizar su lectura y facilitar la corrección de puntos:
 
@@ -234,21 +233,21 @@ El código fuente está fragmentado en submódulos especializados para optimizar
 * **Trazado de Caracteres:** Se implementó una subrutina dedicada a cada letra específica que conforma los nombres requeridos (por ejemplo, `Path_A_1()`, `Path_J()`, `Path_N_1()`, etc.).
 * **Elemento Gráfico:** La rutina `Path_10()` agrupa el movimiento complejo encargado de dibujar el Pacman.
 
-### 6.2 Criterios de Movimiento
+### 5.2 Criterios de Movimiento
 
 * **Dinámica Unificada:** Se garantizó una velocidad constante de `v100` (100 mm/s) durante el contacto con la torta para mantener el flujo del marcador.
 * **Interpolación de Zonas:** Se implementó un radio de empalme `z10` en transiciones largas para dar fluidez al brazo, pero se forzó una zona estricta de `z1` en esquinas críticas (como los vértices de las letras o los ángulos agudos de la boca del Pacman) para no redondear la geometría esperada.
 
 ---
 
-## 7. Evidencias Multimedia
+## 6. Evidencias Multimedia
 
 En este apartado se compilan los registros visuales que certifican el desempeño de las trayectorias programadas.
 
-### 7.1 Validación Virtual
+### 6.1 Validación Virtual
 > 🎥 *[Espacio reservado para anexar el video del gemelo digital en RobotStudio]*
 
-### 7.2 Validación Física
+### 6.2 Validación Física
 > 🎥 *[Espacio reservado para anexar la ejecución real con el hardware en el laboratorio]*
 
 ---
