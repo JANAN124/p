@@ -42,7 +42,6 @@
    - [2.4 Planos de la herramienta](#24-planos-de-la-herramienta)
 3. [Modelado del objeto de trabajo](#3-modelado-del-objeto-de-trabajo)
    - [3.1 Diseño y medidas de la caja (torta virtual)](#31-diseño-y-medidas-de-la-caja-torta-virtual)
-   - [3.2 Importación a RobotStudio y montaje en la celda](#32-importación-a-robotstudio-y-montaje-en-la-celda)
 4. [Configuración en RobotStudio](#4-configuración-en-robotstudio)
    - [4.1 Definición del TCP y Wobj](#41-definición-del-tcp-y-wobj)
    - [4.2 Definición de Targets y trayectorias](#42-definición-de-targets-y-trayectorias)
