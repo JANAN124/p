@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagrama de Flujo — Robot ABB IRB 140</title>
+<style>
+  body { margin: 0; padding: 16px; font-family: system-ui, sans-serif; background: #fff; color: #222; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 10px; }
+  .controls { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+  button { border: 1px solid #ccc; background: #f5f5f5; border-radius: 6px; padding: 4px 14px; cursor: pointer; font-size: 13px; }
+  button:hover { background: #e8e8e8; }
+  #zlabel { font-size: 12px; color: #666; min-width: 42px; text-align: center; }
+  #wrap { overflow: auto; border: 1px solid #ddd; border-radius: 8px; cursor: grab; max-height: 85vh; }
+  #wrap:active { cursor: grabbing; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a; color: #ddd; }
+    button { background: #2a2a2a; border-color: #444; color: #ddd; }
+    button:hover { background: #333; }
+    #wrap { border-color: #444; }
+  }
+</style>
+</head>
+<body>
+<h2>Diagrama de flujo — Programa principal ABB IRB 140</h2>
+<div class="controls">
+  <button onclick="zoom(-0.15)">−</button>
+  <span id="zlabel">100%</span>
+  <button onclick="zoom(0.15)">+</button>
+  <button onclick="resetZoom()">Restablecer</button>
+  <a href="Lab01_README.md" style="margin-left:auto;font-size:12px;color:#185FA5">← Volver al informe</a>
+</div>
+<div id="wrap">
+<svg id="svg" width="1400" height="2100" viewBox="0 0 1400 2100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+<!-- INICIO -->
+<rect x="540" y="20" width="200" height="50" rx="25" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="640" y="42" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#085041">Inicio Rutina Principal</text>
+<text x="640" y="58" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">(PROC main)</text>
+<line x1="640" y1="70" x2="640" y2="100" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<!-- Reset salidas -->
+<rect x="490" y="100" width="300" height="50" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="122" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#0C447C">Restablecer indicadores de Luz</text>
+<text x="640" y="138" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">(Salidas digitales)</text>
+<line x1="640" y1="150" x2="640" y2="180" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<!-- Home -->
+<rect x="490" y="180" width="300" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="199" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#0C447C">Llevar manipulador a</text>
+<text x="640" y="215" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">Home</text>
+<line x1="640" y1="224" x2="640" y2="260" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<!-- BUCLE -->
+<polygon points="640,260 780,310 640,360 500,310" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="640" y="305" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Bucle de</text>
+<text x="640" y="320" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">ejecución continua</text>
+<line x1="640" y1="360" x2="640" y2="400" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<!-- COND 1 -->
+<polygon points="640,400 800,455 640,510 480,455" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="640" y="446" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Condición:</text>
+<text x="640" y="461" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Rutina de decoración</text>
+<text x="640" y="476" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">(DI_01=1, DI_02=0)</text>
+<line x1="480" y1="455" x2="130" y2="455" stroke="#888" stroke-width="1.2"/>
+<line x1="130" y1="455" x2="130" y2="520" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="300" y="445" text-anchor="middle" font-size="11" fill="#3B6D11" font-weight="600">SÍ</text>
+<line x1="800" y1="455" x2="870" y2="455" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="843" y="445" text-anchor="middle" font-size="11" fill="#A32D2D" font-weight="600">NO</text>
+<!-- Rama decoración -->
+<rect x="20" y="520" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="539" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Desplazamiento a pos.</text>
+<text x="130" y="553" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Enciende Luz 1 (DO_01)</text>
+<line x1="130" y1="564" x2="130" y2="594" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="594" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="613" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Habilita avance y dirección</text>
+<text x="130" y="627" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">(Izq. a Der.) de la banda</text>
+<line x1="130" y1="638" x2="130" y2="668" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="668" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="687" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Espera 3s a posicionamiento</text>
+<text x="130" y="701" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">de la banda</text>
+<line x1="130" y1="712" x2="130" y2="742" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="742" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="761" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Detención de banda</text>
+<text x="130" y="775" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Deshabilita avance</text>
+<line x1="130" y1="786" x2="130" y2="816" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="816" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="835" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Ejecución de trayectoria</text>
+<text x="130" y="849" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">de decoración</text>
+<line x1="130" y1="860" x2="130" y2="890" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="890" width="220" height="50" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="909" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Desplazamiento final</text>
+<text x="130" y="923" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">(Retiro pastel): reactiva banda</text>
+<line x1="130" y1="940" x2="130" y2="970" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="970" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="989" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Deshabilita avance de la banda</text>
+<line x1="130" y1="1014" x2="130" y2="1044" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="1044" width="220" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="130" y="1063" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Retorno manipulador a Home</text>
+<line x1="130" y1="1088" x2="130" y2="1118" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="20" y="1118" width="220" height="50" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="130" y="1137" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#085041">Fin de rutina de decoración</text>
+<text x="130" y="1151" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">Apaga Luz 1 (DO_01)</text>
+<line x1="130" y1="1168" x2="130" y2="1900" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="130" y1="1900" x2="640" y2="1900" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="640" y1="1900" x2="640" y2="360" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<!-- COND 2 Ubicación -->
+<polygon points="1050,400 1210,455 1050,510 890,455" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="1050" y="441" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Condición: Ubicación del Pastel</text>
+<text x="1050" y="456" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">(Apoyo física)</text>
+<text x="1050" y="471" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">(DI_01=1, DI_02=1)</text>
+<line x1="870" y1="455" x2="888" y2="455" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<line x1="1050" y1="510" x2="1050" y2="540" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="1062" y="528" font-size="11" fill="#3B6D11" font-weight="600">SÍ</text>
+<line x1="1210" y1="455" x2="1280" y2="455" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="1253" y="445" text-anchor="middle" font-size="11" fill="#A32D2D" font-weight="600">NO</text>
+<rect x="930" y="540" width="240" height="50" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="1050" y="558" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Inicio de Ubicación:</text>
+<text x="1050" y="573" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Enciende Luces 1 y 2</text>
+<line x1="1050" y1="590" x2="1050" y2="620" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="930" y="620" width="240" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="1050" y="639" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Ejecución rutina</text>
+<text x="1050" y="653" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">de ubicación física</text>
+<line x1="1050" y1="664" x2="1050" y2="694" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="930" y="694" width="240" height="50" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="1050" y="712" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#085041">Fin de Ubicación:</text>
+<text x="1050" y="726" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">Apaga Luces 1 y 2</text>
+<line x1="1050" y1="744" x2="1050" y2="1920" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="640" y1="1920" x2="1050" y2="1920" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<!-- COND 3 Mantenimiento -->
+<polygon points="1300,558 1390,615 1300,672 1210,615" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="1300" y="601" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="#854F0B">Condición:</text>
+<text x="1300" y="616" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="#854F0B">Modo mantenimiento</text>
+<text x="1300" y="631" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#854F0B">(DI_02=1, DI_03=0)</text>
+<line x1="1280" y1="455" x2="1300" y2="455" stroke="#888" stroke-width="1.2"/>
+<line x1="1300" y1="455" x2="1300" y2="558" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<line x1="1300" y1="672" x2="1300" y2="700" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="1312" y="688" font-size="11" fill="#3B6D11" font-weight="600">SÍ</text>
+<rect x="1175" y="700" width="250" height="50" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="1300" y="718" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Inicio rutina mantenimiento:</text>
+<text x="1300" y="732" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Enciende Luz 2 (DO_02)</text>
+<line x1="1300" y1="750" x2="1300" y2="780" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="1175" y="780" width="250" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="1300" y="799" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Traslado a zona segura</text>
+<text x="1300" y="813" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">de mantenimiento</text>
+<line x1="1300" y1="824" x2="1300" y2="854" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="1175" y="854" width="250" height="50" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="1300" y="872" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#085041">Fin rutina mantenimiento:</text>
+<text x="1300" y="886" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">Apaga Luz 2 (DO_02)</text>
+<line x1="1300" y1="904" x2="1300" y2="1940" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="640" y1="1940" x2="1300" y2="1940" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<!-- NO Cond3 → Cond4 -->
+<line x1="1210" y1="615" x2="810" y2="615" stroke="#888" stroke-width="1.2"/>
+<line x1="810" y1="615" x2="810" y2="815" stroke="#888" stroke-width="1.2"/>
+<line x1="810" y1="815" x2="802" y2="815" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="1060" y="605" font-size="11" fill="#A32D2D" font-weight="600">NO</text>
+<!-- COND 4 Reinicio Secuencial -->
+<polygon points="640,760 800,815 640,870 480,815" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="640" y="800" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Condición: Reinicio Secuencial</text>
+<text x="640" y="815" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">1ra vez → Pos. Decoro | 2da → Pos. Inicial</text>
+<text x="640" y="830" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">(DI_03=1, DI_02=0)</text>
+<line x1="640" y1="870" x2="640" y2="910" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="652" y="893" font-size="11" fill="#3B6D11" font-weight="600">SÍ</text>
+<rect x="490" y="910" width="300" height="50" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="928" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Retorno banda a posición:</text>
+<text x="640" y="942" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Habilita avance (Der. a Izq.)</text>
+<line x1="640" y1="960" x2="640" y2="990" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="490" y="990" width="300" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="1012" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Enciende Luz 3 (DO_03)</text>
+<line x1="640" y1="1034" x2="640" y2="1064" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="490" y="1064" width="300" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="1083" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Espera 3s a reposicionamiento</text>
+<text x="640" y="1097" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">de la banda</text>
+<line x1="640" y1="1108" x2="640" y2="1138" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="490" y="1138" width="300" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="1160" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Apaga Luz 3 (DO_03)</text>
+<line x1="640" y1="1182" x2="640" y2="1212" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="490" y="1212" width="300" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="640" y="1234" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Deshabilita avance de la banda</text>
+<line x1="640" y1="1256" x2="640" y2="1286" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="490" y="1286" width="300" height="50" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="640" y="1304" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#085041">Detención proceso de reinicio:</text>
+<text x="640" y="1318" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">Retorno manipulador a Home</text>
+<line x1="640" y1="1336" x2="640" y2="1960" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="640" y1="1960" x2="640" y2="1960" stroke="none"/>
+<!-- NO Cond4 → Cond5 -->
+<line x1="480" y1="815" x2="360" y2="815" stroke="#888" stroke-width="1.2"/>
+<line x1="360" y1="815" x2="360" y2="1400" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="430" y="805" font-size="11" fill="#A32D2D" font-weight="600">NO</text>
+<!-- COND 5 Retorno Home -->
+<polygon points="360,1400 500,1455 360,1510 220,1455" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+<text x="360" y="1441" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Condición:</text>
+<text x="360" y="1456" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#854F0B">Retorno directo a Home</text>
+<text x="360" y="1471" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">(DI_02=1, DI_03=1)</text>
+<line x1="360" y1="1510" x2="360" y2="1550" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="372" y="1533" font-size="11" fill="#3B6D11" font-weight="600">SÍ</text>
+<rect x="220" y="1550" width="280" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="360" y="1572" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#0C447C">Traslado manipulador</text>
+<text x="360" y="1586" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">a posición base (Home)</text>
+<line x1="360" y1="1594" x2="360" y2="1960" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="360" y1="1960" x2="640" y2="1960" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="640" y1="1960" x2="640" y2="360" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<!-- Leyenda -->
+<rect x="20" y="1660" width="190" height="138" rx="8" fill="#f9f9f9" stroke="#ccc" stroke-width="0.8"/>
+<text x="115" y="1682" text-anchor="middle" font-size="12" font-weight="600" fill="#333">Leyenda</text>
+<rect x="34" y="1695" width="18" height="14" rx="7" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<text x="62" y="1705" font-size="11" fill="#555">Inicio / Fin</text>
+<polygon points="44,1724 56,1731 44,1738 32,1731" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+<text x="62" y="1734" font-size="11" fill="#555">Decisión</text>
+<rect x="34" y="1748" width="18" height="14" rx="3" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="62" y="1758" font-size="11" fill="#555">Proceso</text>
+<line x1="34" y1="1778" x2="52" y2="1778" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<text x="62" y="1781" font-size="11" fill="#555">Retorno al bucle</text>
+</svg>
+</div>
+<script>
+let scale = 1;
+const svg = document.getElementById('svg');
+const wrap = document.getElementById('wrap');
+function zoom(d) {
+  scale = Math.min(2, Math.max(0.3, scale + d));
+  svg.style.transform = `scale(${scale})`;
+  svg.style.transformOrigin = 'top left';
+  svg.style.width = (1400 * scale) + 'px';
+  svg.style.height = (2100 * scale) + 'px';
+  document.getElementById('zlabel').textContent = Math.round(scale * 100) + '%';
+}
+function resetZoom() {
+  scale = 1; svg.style.transform = ''; svg.style.width = ''; svg.style.height = '';
+  document.getElementById('zlabel').textContent = '100%';
+}
+let drag = false, sx, sy, sl, st;
+wrap.addEventListener('mousedown', e => { drag=true; sx=e.clientX; sy=e.clientY; sl=wrap.scrollLeft; st=wrap.scrollTop; });
+wrap.addEventListener('mousemove', e => { if(!drag) return; wrap.scrollLeft=sl-(e.clientX-sx); wrap.scrollTop=st-(e.clientY-sy); });
+wrap.addEventListener('mouseup', ()=>drag=false);
+wrap.addEventListener('mouseleave', ()=>drag=false);
+</script>
+</body>
+</html>
