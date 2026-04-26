@@ -103,7 +103,7 @@ El primer paso consistió en desarrollar un efector final adaptado a las medidas
 La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión 3D en **PETG**. Una vez lista, la geometría se exportó en formato `.SAT`, permitiendo que RobotStudio la reconociera correctamente para acoplarla al manipulador en el entorno virtual.
  
 <div align="center">
-  <img src="imagenes/Herramienta_Fusion360.png" alt="Modelado de la herramienta en Fusion 360" width="500px">
+  <img src="imagenes/herramienta3d.jpeg" alt="Modelado de la herramienta en Fusion 360" width="500px">
   <br><em>Figura 1. Modelado de la herramienta en Fusion 360</em>
 </div>
 👉 **[Consultar Planos_Herramienta.md completo](./Planos_Herramienta.md)**
@@ -113,17 +113,17 @@ La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión
 La herramienta fue fabricada mediante impresión 3D en PETG y ensamblada con el marcador y el sistema de resorte.
  
 <div align="center">
-  <img src="imagenes/Herramienta_Fisica_Completa.png" alt="Vista completa de la herramienta física" width="300px">
+  <img src="imagenes/d.jpeg" alt="Vista completa de la herramienta física" width="300px">
   &nbsp;&nbsp;
-  <img src="imagenes/Herramienta_Fisica_Lateral.png" alt="Vista lateral de la herramienta física" width="300px">
+  <img src="imagenes/a.jpeg" alt="Vista lateral de la herramienta física" width="300px">
   &nbsp;&nbsp;
-  <img src="imagenes/Herramienta_Fisica_Componentes.png" alt="Componentes de la herramienta física" width="300px">
+  <img src="imagenes/herrmaientaInterior.jpeg" alt="Componentes de la herramienta física" width="300px">
   <br><em>Figura 2. Herramienta física: vista completa, vista lateral y detalle de componentes</em>
 </div>
 
 ### 2.4 Herramienta física montada en el robot 
 <div align="center">
-  <img src="imagenes/Herramienta_Montada_ABB.png" alt="Herramienta montada en el flange del ABB IRB 140" width="500px">
+  <img src="imagenes/herramientarobot..png" alt="Herramienta montada en el flange del ABB IRB 140" width="500px">
   <br><em>Figura 3. Herramienta montada en el flange del ABB IRB 140</em>
 </div>
 
