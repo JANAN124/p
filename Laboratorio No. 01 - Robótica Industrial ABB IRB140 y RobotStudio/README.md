@@ -107,7 +107,10 @@ La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión
   <br><em>Figura 1. Modelado de la herramienta en Fusion 360</em>
 </div>
 
-👉 **[Consultar Planos_Herramienta.md completo](./Planos_Herramienta.md)**
+----
+
+👉 **[Planos Herramienta completo](./Planos_Herramienta.md)**
+
 ### 2.3 Herramienta física
  
 La herramienta fue fabricada mediante impresión 3D en PETG y ensamblada con el marcador y el sistema de resorte.
