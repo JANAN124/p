@@ -113,12 +113,16 @@ La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión
 La herramienta fue fabricada mediante impresión 3D en PETG y ensamblada con el marcador y el sistema de resorte.
  
 <div align="center">
-  <img src="imagenes/d.jpeg" alt="Vista completa de la herramienta física" width="300px">
-  &nbsp;&nbsp;
-  <img src="imagenes/a.jpeg" alt="Vista lateral de la herramienta física" width="300px">
-  &nbsp;&nbsp;
-  <img src="imagenes/herrmaientaInterior.jpeg" alt="Componentes de la herramienta física" width="300px">
-  <br><em>Figura 2. Herramienta física: vista completa, vista lateral y detalle de componentes</em>
+  <img src="imagenes/d.jpeg" alt="Vista completa de la herramienta física" width="500px">
+  <br><em>Figura 2. Vista completa de la herramienta física</em>
+</div>
+<div align="center">
+  <img src="imagenes/a.jpeg" alt="Vista lateral de la herramienta física" width="500px">
+  <br><em>Figura 3. Vista lateral de la herramienta física</em>
+</div>
+<div align="center">
+  <img src="imagenes/herrmaientaInterior.jpeg" alt="Componentes de la herramienta física" width="500px">
+  <br><em>Figura 4. Detalle de los componentes de la herramienta</em>
 </div>
 
 ### 2.4 Herramienta física montada en el robot 
