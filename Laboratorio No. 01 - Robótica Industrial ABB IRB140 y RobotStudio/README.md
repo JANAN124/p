@@ -130,7 +130,7 @@ Se diseñó la caja que representa la superficie de la torta en **Autodesk Fusio
 > 📷 *[Foto de la caja física con sus medidas indicadas]*
 
 <div align="center">
-  <img src="imagenes/Plano pastel-1.png" alt="Plano del pastel" width="600px">
+  <img src="imagenes/CAJA Dibujo v0_page-0001.png" alt="Plano del pastel" width="600px">
   <br><em>Figura 2. Plano de distribución de trayectorias sobre el pastel</em>
 </div>
 
