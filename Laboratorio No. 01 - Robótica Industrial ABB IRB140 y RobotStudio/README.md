@@ -127,8 +127,6 @@ La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión
 
 Se diseñó la caja que representa la superficie de la torta en **Autodesk Fusion 360** para asegurar las proporciones correctas. Sobre este espacio virtual se planificó la distribución geométrica para el trazado de los tres nombres de los integrantes del equipo y la figura de un **Pacman**.
 
-> 📷 *[Foto de la caja física con sus medidas indicadas]*
-
 <div align="center">
   <img src="imagenes/CAJA Dibujo v0_page-0001.jpg" alt="Plano del pastel" width="600px">
   <br><em>Figura 2. Plano de distribución de trayectorias sobre el pastel</em>
@@ -155,7 +153,6 @@ Se programaron los *Targets* (puntos de destino) y las trayectorias para asegura
   <img src="imagenes/1robotstudio.jpeg" alt="Targets y trayectorias sobre la caja con el robot ABB IRB 140" width="600px">
   <br><em>Figura 3. Targets y trayectorias definidas sobre la caja de trabajo junto al robot ABB IRB 140 en RobotStudio</em>
 </div>
----
 
 ## 5. Programación en RAPID
 
