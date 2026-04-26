@@ -316,7 +316,13 @@ El plano muestra la distribución espacial de los elementos del sistema:
 
 Se ejecutó la simulación completa comprobando que los Smart Components, las E/S y las trayectorias interactuaran sin colisiones ni errores.
 
-> 🎥 *[Video de la simulación del gemelo digital en RobotStudio]*
+<div align="center">
+
+[![Ver simulación en RobotStudio](https://img.youtube.com/vi/xfqMgtFwBRc/maxresdefault.jpg)](https://youtu.be/xfqMgtFwBRc)
+
+*🎥 Simulación del gemelo digital en RobotStudio*
+
+</div>
 
 ### 8.3 Resultados obtenidos
 
