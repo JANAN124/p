@@ -120,8 +120,8 @@ La herramienta fue fabricada mediante impresión 3D en PETG y ensamblada con el 
   <img src="imagenes/Herramienta_Fisica_Componentes.png" alt="Componentes de la herramienta física" width="300px">
   <br><em>Figura 2. Herramienta física: vista completa, vista lateral y detalle de componentes</em>
 </div>
-### 2.4 Herramienta física montada en el robot
- 
+
+### 2.4 Herramienta física montada en el robot 
 <div align="center">
   <img src="imagenes/Herramienta_Montada_ABB.png" alt="Herramienta montada en el flange del ABB IRB 140" width="500px">
   <br><em>Figura 3. Herramienta montada en el flange del ABB IRB 140</em>
