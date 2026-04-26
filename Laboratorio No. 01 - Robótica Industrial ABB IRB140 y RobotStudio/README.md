@@ -152,7 +152,7 @@ Con la herramienta y el objeto de trabajo posicionados, se configuró la base de
 
 Se programaron los *Targets* (puntos de destino) y las trayectorias para asegurar que el robot trazara los caracteres y el Pacman con la interpolación adecuada, verificando que no hubiera colisiones ni singularidades en ninguno de los movimientos.
 <div align="center">
-  <img src="imagenes/robotstudio.jpeg" alt="Targets y trayectorias sobre la caja con el robot ABB IRB 140" width="600px">
+  <img src="imagenes/1robotstudio.jpeg" alt="Targets y trayectorias sobre la caja con el robot ABB IRB 140" width="600px">
   <br><em>Figura 3. Targets y trayectorias definidas sobre la caja de trabajo junto al robot ABB IRB 140 en RobotStudio</em>
 </div>
 ---
