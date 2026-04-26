@@ -298,7 +298,7 @@ C5 -- No --> BUCLE
 ### 8.1 Plano de planta
 
 <div align="center">
-  <img src="imagenes/Plano Montaje Lab 1-1.png" alt="Plano de planta" width="850px">
+  <img src="imagenes/planolab.jpg" alt="Plano de planta" width="850px">
   <br><em>Figura 5. Plano de planta con la ubicación del robot, banda transportadora y zona de trabajo</em>
 </div>
 
