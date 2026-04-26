@@ -1,5 +1,7 @@
 # Planos de la Herramienta
- 
-base_Dibujo_v1_page-0001.jpg
-Body_Dibujo_v3_page-0001.jpg
-Point_Dibujo_v1_page-0001.jpg
+
+![Plano base](imagenes/base%20Dibujo%20v1_page-0001.jpg)
+
+![Plano body](imagenes/Body%20Dibujo%20v3_page-0001.jpg)
+
+![Plano point](imagenes/Point%20Dibujo%20v1_page-0001.jpg)
