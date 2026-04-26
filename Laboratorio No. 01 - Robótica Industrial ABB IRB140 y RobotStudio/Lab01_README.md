@@ -52,8 +52,7 @@
    - [5.3 Código RAPID](#53-código-rapid)
 6. [Automatización y control](#6-automatización-y-control)
    - [6.1 Smart Components (movimiento de la cinta)](#61-smart-components-movimiento-de-la-cinta)
-   - [6.2 Entradas y salidas digitales (E/S)](#62-entradas-y-salidas-digitales-es)
-   - [6.3 Station Logic y lógica de tablero](#63-station-logic-y-lógica-de-tablero)
+   - [6.2 Station Logic y lógica de tablero](#62-station-logic-y-lógica-de-tablero)
 7. [Diagrama de flujo de acciones del robot](#7-diagrama-de-flujo-de-acciones-del-robot)
 8. [Simulación y resultados](#8-simulación-y-resultados)
    - [8.1 Plano de planta](#81-plano-de-planta)
@@ -151,11 +150,6 @@ Con la herramienta y el objeto de trabajo posicionados, se configuró la base de
 - Se definió el **TCP** (Tool Center Point) virtual asociado a la punta del marcador.
 - Se creó el sistema de coordenadas de la pieza o **Workobject** alineado con la caja.
 
-| Dato | Tipo | Descripción |
-|------|------|-------------|
-| `Marcador` | `tooldata` | Define el TCP y masa de la herramienta activa (marcador adaptado). |
-| `Pastel` | `wobjdata` | Define el sistema de coordenadas del objeto de trabajo (superficie de la torta). |
-
 ### 4.2 Definición de Targets y trayectorias
 
 Se programaron los *Targets* (puntos de destino) y las trayectorias para asegurar que el robot trazara los caracteres y el Pacman con la interpolación adecuada, verificando que no hubiera colisiones ni singularidades en ninguno de los movimientos.
@@ -210,28 +204,21 @@ Toda la secuencia de trayectorias y el control de E/S se estructuraron bajo un e
 
 Para dotar de realismo a la simulación y emular el proceso de una línea de producción, se configuraron **Smart Components** en RobotStudio. Estos componentes inteligentes permitieron simular la cinemática de la caja desplazándose sobre la banda transportadora, reflejando el comportamiento que tendría el sistema en la vida real.
 
-### 6.2 Entradas y salidas digitales (E/S)
+### 6.2 Station Logic y lógica de tablero
 
-#### Señales digitales definidas
+El entorno de *Station Logic* en RobotStudio permitió interconectar las señales digitales del controlador con los Smart Components de la banda transportadora, consolidando una arquitectura de control coherente con el proceso industrial simulado. Cada condición de entrada desencadena una secuencia específica dentro del bucle principal de ejecución:
 
-| Señal | Tipo | Función |
-|-------|------|---------|
-| `DI_01` | Entrada | Inicia el ciclo principal (ejecuta el código RAPID). |
-| `DI_02` | Entrada | Envía el robot a posición de mantenimiento. |
-| `DI_03` | Entrada | Mueve la banda en reversa para posicionar el pastel a punto. |
-| `DI_02` + `DI_03` | Entradas | Pulsadas al tiempo, envían el robot a posición *Home*. |
-| `DO_01` | Salida | Indicador de ejecución de rutina principal / control hacia el Smart Component. |
-| `DO_02` | Salida | Indicador de modo mantenimiento. |
-| `DO_03` | Salida | Control del Smart Component para el movimiento en reversa. |
+**Rutina de Decoración (`DI_01`):** Cuando esta entrada se activa, el sistema enciende el indicador luminoso asociado a `DO_01` como señal de operación en curso. A continuación habilita el avance de la banda transportadora, aguarda tres segundos para garantizar el posicionamiento correcto del pastel, despliega la trayectoria completa de decoración y, al concluir, reactiva la banda para retirar el pastel antes de que el manipulador regrese a la posición Home.
 
-### 6.3 Station Logic y lógica de tablero
+**Apoyo Físico / Ubicación (`DI_01` + `DI_02`):** Esta combinación de entradas está orientada al posicionamiento manual del pastel en la celda. El manipulador se desplaza al punto de referencia de decoración para servir como guía visual al operario. Durante toda la intervención, los indicadores `DO_01` y `DO_02` permanecen activos de forma simultánea, advirtiendo que hay presencia humana dentro del área de trabajo.
 
-La coordinación entre el manipulador y los Smart Components de la banda transportadora se logró mediante la configuración de señales digitales interconectadas en el entorno de *Station Logic*. La arquitectura de control quedó definida de la siguiente manera:
+**Modo Mantenimiento (`DI_02`):** Al detectarse esta entrada de forma individual, el robot se traslada a una zona de acceso seguro y se activa `DO_02` como señal de advertencia. Una vez completado el desplazamiento, el indicador se apaga automáticamente y el sistema retoma el bucle de ejecución continua.
 
-- **`DI_01`**: Inicia el ciclo principal, ejecutando el código RAPID.
-- **`DI_02`**: Posiciona el robot en postura de mantenimiento.
-- **`DI_03`**: Activa la banda en reversa para dejar el pastel "a punto" en la posición de inicio.
-- **Combinación `DI_02` + `DI_03`**: Al oprimirse simultáneamente, envían al robot a su posición *Home*.
+**Reinicio Secuencial (`DI_03`):** Esta entrada implementa una lógica de doble accionamiento para gestionar la posición de la banda transportadora. El primer pulso lleva la banda hasta la zona de decorado; el segundo la regresa a su punto de partida. En ambos casos se activa `DO_03` como indicador de movimiento, y el manipulador es enviado a Home mientras la banda se desplaza en reversa durante tres segundos.
+
+**Retorno Directo a Home (`DI_02` + `DI_03`):** Condición de seguridad que, al pulsarse simultáneamente, ordena el traslado inmediato del manipulador a su posición base sin ejecutar ninguna rutina adicional.
+
+**Gestión de Indicadores (`DO_01`, `DO_02`, `DO_03`):** Las tres salidas digitales cumplen una función de señalización visual del estado del sistema. Su activación permite al operario identificar en todo momento qué rutina está en ejecución, reduciendo el riesgo de intervención involuntaria durante las secuencias de decoración, apoyo y mantenimiento.
 
 <div align="center">
   <img src="imagenes/Logica_Estacion.png" alt="Lógica de la Estación en RobotStudio" width="800px">
