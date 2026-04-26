@@ -99,27 +99,34 @@ El primer paso consistió en desarrollar un efector final adaptado a las medidas
 > **Material de fabricación:** PETG (resistencia y durabilidad) mediante impresión 3D.
 
 ### 2.2 Modelado en Fusion 360 (herramienta + marcador)
-
+ 
 La pieza fue modelada en **Autodesk Fusion 360** y fabricada mediante impresión 3D en **PETG**. Una vez lista, la geometría se exportó en formato `.SAT`, permitiendo que RobotStudio la reconociera correctamente para acoplarla al manipulador en el entorno virtual.
-
+ 
 <div align="center">
-  <img src="imagenes/Herramienta_Vista1.png" alt="Vista isométrica de la herramienta" width="300px">
+  <img src="imagenes/Herramienta_Fusion360.png" alt="Modelado de la herramienta en Fusion 360" width="500px">
+  <br><em>Figura 1. Modelado de la herramienta en Fusion 360</em>
+</div>
+👉 **[Consultar Planos_Herramienta.md completo](./Planos_Herramienta.md)**
+ 
+### 2.3 Herramienta física
+ 
+La herramienta fue fabricada mediante impresión 3D en PETG y ensamblada con el marcador y el sistema de resorte.
+ 
+<div align="center">
+  <img src="imagenes/Herramienta_Fisica_Completa.png" alt="Vista completa de la herramienta física" width="300px">
   &nbsp;&nbsp;
-  <img src="imagenes/Herramienta_Vista2.png" alt="Vista lateral de la herramienta" width="300px">
+  <img src="imagenes/Herramienta_Fisica_Lateral.png" alt="Vista lateral de la herramienta física" width="300px">
   &nbsp;&nbsp;
-  <img src="imagenes/Herramienta_Vista3.png" alt="Detalle del sistema de resorte" width="300px">
-  <br><em>Figura 1. Herramienta de decoración en Fusion 360: vista isométrica, lateral y detalle del mecanismo de compensación</em>
+  <img src="imagenes/Herramienta_Fisica_Componentes.png" alt="Componentes de la herramienta física" width="300px">
+  <br><em>Figura 2. Herramienta física: vista completa, vista lateral y detalle de componentes</em>
+</div>
+### 2.4 Herramienta física montada en el robot
+ 
+<div align="center">
+  <img src="imagenes/Herramienta_Montada_ABB.png" alt="Herramienta montada en el flange del ABB IRB 140" width="500px">
+  <br><em>Figura 3. Herramienta montada en el flange del ABB IRB 140</em>
 </div>
 
-### 2.3 Herramienta física montada en el robot
-
-> 📷 *[Foto de la herramienta impresa en 3D montada en el flange del ABB IRB 140]*
-
-### 2.4 Planos de la herramienta
-
-> 📐 *[Espacio reservado para los planos técnicos de la herramienta (vistas, cotas y tolerancias)]*
-
----
 
 ## 3. Modelado del objeto de trabajo
 
