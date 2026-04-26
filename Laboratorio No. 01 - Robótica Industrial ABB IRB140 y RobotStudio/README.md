@@ -59,6 +59,7 @@
    - [8.2 Verificación de la simulación en RobotStudio](#82-verificación-de-la-simulación-en-robotstudio)
    - [8.3 Resultados obtenidos](#83-resultados-obtenidos)
 
+
 ---
 
 ## 1. Introducción
@@ -149,11 +150,7 @@ Se diseñó la caja que representa la superficie de la torta en **Autodesk Fusio
   <br><em>Figura 2. Plano de distribución de trayectorias sobre el pastel</em>
 </div>
 
-### 3.2 Importación a RobotStudio y montaje en la celda
 
-Con los modelos listos en Fusion 360, tanto la herramienta como la caja se exportaron en formato `.SAT` e importaron a RobotStudio, donde se posicionaron correctamente en la celda de manufactura virtual.
-
----
 
 ## 4. Configuración en RobotStudio
 
