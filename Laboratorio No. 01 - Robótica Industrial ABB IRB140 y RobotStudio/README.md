@@ -190,17 +190,13 @@ A continuación se describen las instrucciones de movimiento RAPID empleadas en 
 
 ### 5.2 Lógica del programa (nombres + Pacman)
 
-El programa se estructura bajo un enfoque modular dentro de un bucle infinito `WHILE TRUE`, donde la ejecución de cada rutina depende del estado de las entradas digitales. Al iniciar, se restablecen todas las salidas digitales (`DO_01`, `DO_02`, `DO_03`) y el manipulador es enviado a la posición Home como punto de partida seguro.
-
-Dentro del bucle se evalúan cinco condiciones en orden de prioridad:
-
-- **`DI_01 = 1` y `DI_02 = 0`** — Ejecuta la rutina de decoración completa. Activa `DO_01`, espera 3 segundos para el posicionamiento de la banda, luego recorre secuencialmente los paths de trayectoria (`Path_10` al `Path_142`) que corresponden a los tres nombres y la figura de Pacman. Al finalizar, reactiva la banda 2 segundos para retirar el pastel y retorna a Home.
-- **`DI_01 = 1` y `DI_02 = 1`** — Rutina de apoyo físico. Activa `DO_01` y `DO_02` simultáneamente, ejecuta `Path_11` (posición de referencia para ubicar el pastel) y apaga los indicadores al terminar.
-- **`DI_02 = 1` y `DI_03 = 0`** — Modo mantenimiento. Activa `DO_02`, desplaza el robot a zona segura mediante `Path_42000` y apaga el indicador al concluir.
-- **`DI_03 = 1` y `DI_02 = 0`** — Reinicio secuencial de la banda. Activa `DO_03`, ejecuta el retroceso de la banda durante 3 segundos, apaga el indicador y envía el manipulador a Home (`Path_10`).
-- **`DI_02 = 1` y `DI_03 = 1`** — Retorno directo a Home sin condiciones adicionales.
-
-Las trayectorias de decoración están distribuidas en paths nombrados secuencialmente. Cada path agrupa los puntos correspondientes a un trazo específico: segmentos de letras, curvas y el contorno del Pacman, usando `MoveL` para líneas rectas y `MoveC` para arcos y curvas.
+El `PROC main()` inicia reseteando las salidas digitales (`DO_01`, `DO_02`, `DO_03`) y entra en un bucle `WHILE TRUE` que evalúa el estado de las entradas digitales para decidir qué rutina ejecutar:
+ 
+- **`DI_01 = 1`, `DI_02 = 0`:** Rutina de decoración completa. Activa `DO_01`, espera 3 segundos para posicionar el pastel en la banda y ejecuta todos los paths de trayectoria en orden (`Path_10` al `Path_142`), que trazan los tres nombres y la figura del Pacman. Al terminar, retorna a Home y activa la banda 2 segundos para retirar el pastel.
+- **`DI_01 = 1`, `DI_02 = 1`:** Apoyo físico. Activa `DO_01` y `DO_02`, mueve el robot al punto de referencia de decoración (`Path_11`) como guía para el operario, y apaga los indicadores al finalizar.
+- **`DI_02 = 1`, `DI_03 = 0`:** Modo mantenimiento. Activa `DO_02`, desplaza el robot a una zona segura (`Path_42000`) y apaga el indicador al concluir.
+- **`DI_03 = 1`, `DI_02 = 0`:** Reinicio de la banda. Activa `DO_03`, espera 3 segundos para el retroceso de la banda y envía el robot a Home (`Path_10`).
+- **`DI_02 = 1`, `DI_03 = 1`:** Retorno directo a Home sin ejecutar ninguna rutina adicional.
 
 ### 5.3 Código RAPID
 
