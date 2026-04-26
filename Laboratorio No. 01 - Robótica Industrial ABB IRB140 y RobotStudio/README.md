@@ -138,8 +138,6 @@ Se diseñó la caja que representa la superficie de la torta en **Autodesk Fusio
 
 Con los modelos listos en Fusion 360, tanto la herramienta como la caja se exportaron en formato `.SAT` e importaron a RobotStudio, donde se posicionaron correctamente en la celda de manufactura virtual.
 
-> 📷 *[Foto de la herramienta acoplada al robot y la caja posicionada en la banda, dentro de RobotStudio]*
-
 ---
 
 ## 4. Configuración en RobotStudio
@@ -153,7 +151,10 @@ Con la herramienta y el objeto de trabajo posicionados, se configuró la base de
 ### 4.2 Definición de Targets y trayectorias
 
 Se programaron los *Targets* (puntos de destino) y las trayectorias para asegurar que el robot trazara los caracteres y el Pacman con la interpolación adecuada, verificando que no hubiera colisiones ni singularidades en ninguno de los movimientos.
-
+<div align="center">
+  <img src="imagenes/robotstudio.jpeg" alt="Targets y trayectorias sobre la caja con el robot ABB IRB 140" width="600px">
+  <br><em>Figura 3. Targets y trayectorias definidas sobre la caja de trabajo junto al robot ABB IRB 140 en RobotStudio</em>
+</div>
 ---
 
 ## 5. Programación en RAPID
