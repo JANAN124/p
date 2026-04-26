@@ -214,7 +214,7 @@ El `PROC main()` inicia reseteando las salidas digitales (`DO_01`, `DO_02`, `DO_
 
 ### 5.3 Código RAPID
 
-👉 **[Consultar Código_RAPID.md completo](./Código_RAPID.md)**
+👉 **[Código RAPID completo](./Código_RAPID.md)**
 
 ---
 
