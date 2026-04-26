@@ -230,11 +230,6 @@ El entorno de *Station Logic* en RobotStudio permitió interconectar las señale
 
 **Gestión de Indicadores (`DO_01`, `DO_02`, `DO_03`):** Las tres salidas digitales cumplen una función de señalización visual del estado del sistema. Su activación permite al operario identificar en todo momento qué rutina está en ejecución, reduciendo el riesgo de intervención involuntaria durante las secuencias de decoración, apoyo y mantenimiento.
 
-<div align="center">
-  <img src="imagenes/Logica_Estacion.png" alt="Lógica de la Estación en RobotStudio" width="800px">
-  <br><em>Figura 3. Diagrama de bloques de la Station Logic interconectando entradas, controlador y Smart Components</em>
-</div>
-
 ---
 
 ## 7. Diagrama de flujo de acciones del robot
