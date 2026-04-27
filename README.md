@@ -154,7 +154,7 @@ Además, me interesa el análisis de datos y su aplicación en la comprensión d
 
 | # | Laboratorio | Robot | Software | Estado |
 |---|-------------|-------|----------|--------|
-| 01 | [Robótica Industrial: Trayectorias, entradas y salidas digitales](./Laboratorio%20No.%2001%20-%20Rob%C3%B3tica%20Industrial%20ABB%20IRB140%20y%20RobotStudio/) | ABB IRB 140 | RobotStudio | ✅ Completo |
+| 01 | [Robótica Industrial: Trayectorias, entradas y salidas digitales](./Laboratorio%20No.%2001%20-%20Rob%C3%B3tica%20Industrial%20ABB%20IRB140%20y%20RobotStudio/) | ABB IRB 140 CAIN | RobotStudio | ✅ Completo |
 | 02 | [Robótica Industrial Motoman MH6](./Laboratorio%20No.%2002%20-%20Rob%C3%B3tica%20Industrial%20Motoman%20MH6%20y%20RoboDK/) | Yaskawa Motoman MH6 | RoboDK | 🔄 En progreso |
 | 03 | [Robótica Industrial EPSON T3 401S](./Laboratorio%20No.%2003%20-%20Rob%C3%B3tica%20Industrial%20EPSON%20T3%20401S%20y%20EPSON%20RC+/) | EPSON T3 401S | EPSON RC+ | 🔄 En progreso |
 | 04 | [ROS Jazzy y Turtlesim](./Laboratorio%20No.%2004%20-%20Rob%C3%B3tica%20de%20Desarrollo%20ROS%20Jazzy%20y%20Turtlesim/) | Turtlesim (virtual) | ROS 2 Jazzy | 🔄 En progreso |
