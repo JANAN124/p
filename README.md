@@ -100,7 +100,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Rol** | Modelado 3D, pruebas y simulación |
 | **Intereses** | [Próximamente] |
 
->Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control.
+Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control.
 Además, me interesa el análisis de datos y su aplicación en la comprensión de problemáticas sociales y económicas, buscando siempre un enfoque crítico y analítico. Me caracterizo por ser una persona orientada al aprendizaje continuo, con capacidad para trabajar en equipo y aportar soluciones prácticas en el desarrollo de proyectos.
 
 ---
