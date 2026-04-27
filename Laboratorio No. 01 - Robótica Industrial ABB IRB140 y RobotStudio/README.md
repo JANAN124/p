@@ -327,27 +327,30 @@ Se ejecutó la simulación completa comprobando que los Smart Components, las E/
 ### 8.3 Resultados obtenidos
 
 Una vez validado en simulación, el código fue transferido al controlador IRC5 físico, donde se realizaron ajustes menores del Workobject debido a las tolerancias de ubicación de la banda transportadora real.
-
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="imagenes/f1.png" alt="Resultado final - pastel decorado" width="400px">
+        <img src="imagenes/f1.png" alt="Resultado final - pastel decorado" width="350px" height="260px">
         <br><em>Figura 6. Resultado final: pastel decorado con los nombres y Pacman</em>
       </td>
       <td align="center">
-        <img src="imagenes/f.png" alt="Pastel en la banda transportadora con robots de fondo" width="400px">
+        <img src="imagenes/f.png" alt="Pastel en la banda transportadora con robots de fondo" width="350px" height="260px">
         <br><em>Figura 7. Pastel sobre la banda transportadora en el laboratorio</em>
       </td>
     </tr>
   </table>
 </div>
 
+---
+
 <div align="center">
+
+### 🎥 Video de ejecución real
 
 [![Ejecución real - ABB IRB 140 con IRC5](https://img.youtube.com/vi/4slQGHLm8xY/maxresdefault.jpg)](https://youtu.be/4slQGHLm8xY)
 
-*🎥 Ejecución real del robot ABB IRB 140 con controlador IRC5*
+*Ejecución real del robot ABB IRB 140 con controlador IRC5*
 
 </div>
 ---
