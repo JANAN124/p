@@ -60,9 +60,11 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Correo** | jacarrenor@unal.edu.co |
 | **GitHub** | [@JananLC](https://github.com/JananLC) |
 | **Rol** | Programación y simulación |
-| **Intereses** | [Próximamente] |
+| **Intereses** | 🚁 Drones · ⚙️ Automatización · 💻 Programación  |
 
-> [Descripción breve próximamente]
+Descripcion: Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control.
+
+Más allá de la ingeniería tradicional, me atrae el análisis de datos como herramienta crítica para entender y descifrar problemáticas sociales y económicas. Soy un fiel creyente del trabajo en equipo y del aprendizaje continuo como motores fundamentales para aportar soluciones prácticas, eficientes e innovadoras en cada proyecto que emprendo
 
 ---
 
@@ -79,9 +81,9 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Correo** | Crhoyosp@unal.edu.co |
 | **GitHub** | [@Hoyoscristian](https://github.com/Hoyoscristian) |
 | **Rol** | Documentación, pruebas y modelado 3D |
-| **Intereses** | [Próximamente] |
+| **Intereses** | ⚡ Electrónica · 🎛️ Sistemas de control · 🔩 Mecánica |
 
-> [Descripción breve próximamente]
+**Descripcion:** Como estudiante de Ingeniería Mecatrónica, mi curiosidad me impulsa a explorar la integración de procesos, combinando la electrónica, la mecánica y los sistemas de control. Utilizo la programación y la simulación para desarrollar soluciones automatizadas eficientes. Más allá de la ingeniería, aplico el análisis de datos para entender problemáticas socioeconómicas con un enfoque crítico. Disfruto el trabajo en equipo, el aprendizaje continuo y aportar soluciones prácticas en cada proyecto
 
 ---
 
@@ -98,10 +100,11 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Correo** | jzapatapi@unal.edu.co |
 | **GitHub** | [@jzapatapi](https://github.com/jzapatapi) |
 | **Rol** | Modelado 3D, pruebas y simulación |
-| **Intereses** | [Próximamente] |
+| **Intereses** | 🏭 Automatización industrial · 🖨️ Modelado 3D · 📊 Análisis de datos |
 
-Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control.
+**Descripcion:** Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control.
 Además, me interesa el análisis de datos y su aplicación en la comprensión de problemáticas sociales y económicas, buscando siempre un enfoque crítico y analítico. Me caracterizo por ser una persona orientada al aprendizaje continuo, con capacidad para trabajar en equipo y aportar soluciones prácticas en el desarrollo de proyectos.
+
 
 ---
 
