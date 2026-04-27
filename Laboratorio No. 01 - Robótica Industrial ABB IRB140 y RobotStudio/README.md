@@ -94,7 +94,7 @@ El primer paso consistió en desarrollar un efector final adaptado a las medidas
 
 - **Fijación mecánica** – La herramienta se asegura con **tornillos** al flange del robot, respetando los planos técnicos del IRB 140.
 - **Evitar singularidades** – El eje del marcador **no es colineal** con el eje del flange. Se adoptó una rotación de **45° en el plano horizontal**.
-- **Compensación de errores** – El marcador **no se fija de forma rígida**. Se incorporó un **sistema de resorte** que permite una **tolerancia axial de 20 mm**, absorbiendo desviaciones de calibración o irregularidades de la superficie.
+- **Compensación de errores** – El marcador **no se fija de forma rígida**. Se incorporó un **sistema de 2 resortes** que permite una **tolerancia axial de 20 mm**, absorbiendo desviaciones de calibración o irregularidades de la superficie.
 
 > **Material de fabricación:** PETG (resistencia y durabilidad) mediante impresión 3D.
 
