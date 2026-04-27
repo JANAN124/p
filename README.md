@@ -50,23 +50,21 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 ### 👤 Integrante 1
 
 <div align="center">
-  <img src="Fotos/ja.png" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/ja.png" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br><br>
+
+  <table align="center">
+    <tr><td><b>Nombre</b></td><td>Janan Libardo Carreño Riaño</td></tr>
+    <tr><td><b>Carrera</b></td><td>Ingeniería Mecatrónica</td></tr>
+    <tr><td><b>Correo</b></td><td><a href="mailto:jacarrenor@unal.edu.co">jacarrenor@unal.edu.co</a></td></tr>
+    <tr><td><b>GitHub</b></td><td><a href="https://github.com/JananLC">@JananLC</a></td></tr>
+    <tr><td><b>Rol</b></td><td>Programación y simulación</td></tr>
+    <tr><td><b>Intereses</b></td><td>🚁 Drones · ⚙️ Automatización · 💻 Programación</td></tr>
+  </table>
+
+  <br>
+
+  <p><em>Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control. Más allá de la ingeniería tradicional, me atrae el análisis de datos como herramienta crítica para entender y descifrar problemáticas sociales y económicas. Soy un fiel creyente del trabajo en equipo y del aprendizaje continuo como motores fundamentales para aportar soluciones prácticas, eficientes e innovadoras en cada proyecto que emprendo.</em></p>
 </div>
-
-| Campo | Información |
-|-------|------------|
-| **Nombre** | Janan Libardo Carreño Riaño |
-| **Carrera** | Ingeniería Mecatrónica |
-| **Correo** | jacarrenor@unal.edu.co |
-| **GitHub** | [@JananLC](https://github.com/JananLC) |
-| **Rol** | Programación y simulación |
-| **Intereses** | 🚁 Drones · ⚙️ Automatización · 💻 Programación  |
-
-**Descripcion:** Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control.
-
-Más allá de la ingeniería tradicional, me atrae el análisis de datos como herramienta crítica para entender y descifrar problemáticas sociales y económicas. Soy un fiel creyente del trabajo en equipo y del aprendizaje continuo como motores fundamentales para aportar soluciones prácticas, eficientes e innovadoras en cada proyecto que emprendo
-</div>
----
 
 ### 👤 Integrante 2
 
