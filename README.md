@@ -62,7 +62,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 | **Rol** | Programación y simulación |
 | **Intereses** | 🚁 Drones · ⚙️ Automatización · 💻 Programación  |
 
-Descripcion: Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control.
+**Descripcion:** Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control.
 
 Más allá de la ingeniería tradicional, me atrae el análisis de datos como herramienta crítica para entender y descifrar problemáticas sociales y económicas. Soy un fiel creyente del trabajo en equipo y del aprendizaje continuo como motores fundamentales para aportar soluciones prácticas, eficientes e innovadoras en cada proyecto que emprendo
 
