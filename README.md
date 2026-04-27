@@ -50,7 +50,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 ### 👤 Integrante 1
 
 <div align="center">
-  <img src="Imágenes/ja.png" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/ja.png" alt="Janan Libardo Carreño" style="border-radius: 50%; width: 180px;"><br>
 </div>
 
 | Campo | Información |
