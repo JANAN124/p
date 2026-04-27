@@ -111,7 +111,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
   <table>
     <tr>
       <td align="center" width="65%">
-        <img src="Fotos/simu.gif" alt="Simulación y ejecución real - ABB IRB 140" width="100%">
+        <img src="Fotos/simu1.gif" alt="Simulación y ejecución real - ABB IRB 140" width="100%">
         <br><em>🤖 Ejecución real &nbsp;|&nbsp; 🖥️ Simulación en RobotStudio</em>
       </td>
     </tr>
