@@ -66,7 +66,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
   <p align="justify"><em>Como estudiante de Ingeniería Mecatrónica, mi curiosidad natural me impulsa a explorar y conectar diversas áreas de la tecnología. A través de mi formación, he consolidado habilidades en programación y electrónica aplicada, encontrando una verdadera pasión en el modelado 3D, la simulación y el fascinante mundo de los drones. Me motiva profundamente la integración de procesos y el desarrollo de proyectos que fusionen distintas disciplinas, con un enfoque especial en la automatización y los sistemas de control. Más allá de la ingeniería tradicional, me atrae el análisis de datos como herramienta crítica para entender y descifrar problemáticas sociales y económicas. Soy un fiel creyente del trabajo en equipo y del aprendizaje continuo como motores fundamentales para aportar soluciones prácticas, eficientes e innovadoras en cada proyecto que emprendo.</em></p>
 </div>
 
-
+---
 
 ### 👤 Integrante 2
 
@@ -87,7 +87,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
   <p align="justify"><em>Como estudiante de Ingeniería Mecatrónica, mi curiosidad me impulsa a explorar la integración de procesos, combinando la electrónica, la mecánica y los sistemas de control. Utilizo la programación y la simulación para desarrollar soluciones automatizadas eficientes. Más allá de la ingeniería, aplico el análisis de datos para entender problemáticas socioeconómicas con un enfoque crítico. Disfruto el trabajo en equipo, el aprendizaje continuo y aportar soluciones prácticas en cada proyecto.</em></p>
 </div>
 
-
+---
 
 ### 👤 Integrante 3
 
