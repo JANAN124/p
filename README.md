@@ -69,42 +69,42 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 ### 👤 Integrante 2
 
 <div align="center">
-  <img src="Fotos/ch.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/ch.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br><br>
+
+  <table align="center">
+    <tr><td><b>Nombre</b></td><td>Cristian Stiven Hoyos Peralta</td></tr>
+    <tr><td><b>Carrera</b></td><td>Ingeniería Mecatrónica</td></tr>
+    <tr><td><b>Correo</b></td><td><a href="mailto:Crhoyosp@unal.edu.co">Crhoyosp@unal.edu.co</a></td></tr>
+    <tr><td><b>GitHub</b></td><td><a href="https://github.com/Hoyoscristian">@Hoyoscristian</a></td></tr>
+    <tr><td><b>Rol</b></td><td>Documentación, pruebas y modelado 3D</td></tr>
+    <tr><td><b>Intereses</b></td><td>⚡ Electrónica · 🎛️ Sistemas de control · 🔩 Mecánica</td></tr>
+  </table>
+
+  <br>
+
+  <p align="justify"><em>Como estudiante de Ingeniería Mecatrónica, mi curiosidad me impulsa a explorar la integración de procesos, combinando la electrónica, la mecánica y los sistemas de control. Utilizo la programación y la simulación para desarrollar soluciones automatizadas eficientes. Más allá de la ingeniería, aplico el análisis de datos para entender problemáticas socioeconómicas con un enfoque crítico. Disfruto el trabajo en equipo, el aprendizaje continuo y aportar soluciones prácticas en cada proyecto.</em></p>
 </div>
 
-| Campo | Información |
-|-------|------------|
-| **Nombre** | Cristian Stiven Hoyos Peralta |
-| **Carrera** | Ingeniería Mecatrónica |
-| **Correo** | Crhoyosp@unal.edu.co |
-| **GitHub** | [@Hoyoscristian](https://github.com/Hoyoscristian) |
-| **Rol** | Documentación, pruebas y modelado 3D |
-| **Intereses** | ⚡ Electrónica · 🎛️ Sistemas de control · 🔩 Mecánica |
-
-**Descripcion:** Como estudiante de Ingeniería Mecatrónica, mi curiosidad me impulsa a explorar la integración de procesos, combinando la electrónica, la mecánica y los sistemas de control. Utilizo la programación y la simulación para desarrollar soluciones automatizadas eficientes. Más allá de la ingeniería, aplico el análisis de datos para entender problemáticas socioeconómicas con un enfoque crítico. Disfruto el trabajo en equipo, el aprendizaje continuo y aportar soluciones prácticas en cada proyecto
-</div>
 ---
 
 ### 👤 Integrante 3
 
 <div align="center">
-  <img src="Fotos/zp.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/zp.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br><br>
+
+  <table align="center">
+    <tr><td><b>Nombre</b></td><td>Jose Andres Zapata Piñeros</td></tr>
+    <tr><td><b>Carrera</b></td><td>Ingeniería Mecatrónica</td></tr>
+    <tr><td><b>Correo</b></td><td><a href="mailto:jzapatapi@unal.edu.co">jzapatapi@unal.edu.co</a></td></tr>
+    <tr><td><b>GitHub</b></td><td><a href="https://github.com/jzapatapi">@jzapatapi</a></td></tr>
+    <tr><td><b>Rol</b></td><td>Modelado 3D, pruebas y simulación</td></tr>
+    <tr><td><b>Intereses</b></td><td>🏭 Automatización industrial · 🖨️ Modelado 3D · 📊 Análisis de datos</td></tr>
+  </table>
+
+  <br>
+
+  <p align="justify"><em>Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control. Además, me interesa el análisis de datos y su aplicación en la comprensión de problemáticas sociales y económicas, buscando siempre un enfoque crítico y analítico. Me caracterizo por ser una persona orientada al aprendizaje continuo, con capacidad para trabajar en equipo y aportar soluciones prácticas en el desarrollo de proyectos.</em></p>
 </div>
-
-| Campo | Información |
-|-------|------------|
-| **Nombre** | Jose Andres Zapata Piñeros |
-| **Carrera** | Ingeniería Mecatrónica |
-| **Correo** | jzapatapi@unal.edu.co |
-| **GitHub** | [@jzapatapi](https://github.com/jzapatapi) |
-| **Rol** | Modelado 3D, pruebas y simulación |
-| **Intereses** | 🏭 Automatización industrial · 🖨️ Modelado 3D · 📊 Análisis de datos |
-
-**Descripcion:** Soy estudiante de Ingeniería Mecatrónica con formación técnica en mantenimiento electrónico, lo que me ha permitido desarrollar habilidades tanto en programación como en electrónica aplicada. Tengo un fuerte interés en el modelado 3D, la simulación y el desarrollo de proyectos tecnológicos que integren distintas áreas de la ingeniería, especialmente en automatización y sistemas de control.
-Además, me interesa el análisis de datos y su aplicación en la comprensión de problemáticas sociales y económicas, buscando siempre un enfoque crítico y analítico. Me caracterizo por ser una persona orientada al aprendizaje continuo, con capacidad para trabajar en equipo y aportar soluciones prácticas en el desarrollo de proyectos.
-
-</div>
----
 
 ## 🖼️ Galería de Evidencias
 
