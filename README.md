@@ -108,8 +108,18 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 
 ### ✅ Laboratorio 1: Robótica Industrial ABB IRB140
 <div align="center">
-  <img src="Imágenes/Resultado_Lab1.gif" alt="Evidencia Lab 1" width="500px">
-  <p><i>Simulación y ejecución de trayectorias con robot ABB.</i></p>
+  <table>
+    <tr>
+      <td align="center" width="65%">
+        <img src="Fotos/simu1.gif" alt="Simulación y ejecución real - ABB IRB 140" width="100%">
+        <br><em>🖥️ Simulación en RobotStudio &nbsp;|&nbsp; 🤖 Ejecución real con IRC5</em>
+      </td>
+      <td align="center" width="35%">
+        <img src="Laboratorio No. 01 - Robótica Industrial ABB IRB140 y RobotStudio/imagenes/f1.png" alt="Resultado final - torta decorada" width="100%">
+        <br><em>🎂 Resultado final:<br>torta decorada</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ### ⏳ Laboratorio 2: Motoman MH6 y RoboDK
