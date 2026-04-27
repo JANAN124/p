@@ -335,7 +335,7 @@ Una vez validado en simulación, el código fue transferido al controlador IRC5 
         <br><em>Figura 6. Resultado final: pastel decorado con los nombres y Pacman</em>
       </td>
       <td align="center">
-        <img src="imagenes/f.png" alt="Pastel en la banda transportadora con robots de fondo" width="400px" height="300px">
+        <img src="imagenes/f.png" alt="Pastel en la banda transportadora con robots de fondo" width="400px" height="100px">
         <br><em>Figura 7. Pastel sobre la banda transportadora en el laboratorio</em>
       </td>
     </tr>
