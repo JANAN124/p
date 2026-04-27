@@ -108,11 +108,11 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 
 ### ✅ Laboratorio 1: Robótica Industrial ABB IRB140
 <div align="center">
-  <img src="Fotos/simu1.gif" alt="Ejecución real y simulación - ABB IRB 140" width="700px">
+  <img src="Fotos/se.gif" alt="Ejecución real y simulación - ABB IRB 140" width="700px">
   <br><em>🤖 Ejecución real &nbsp;|&nbsp; 🖥️ Simulación en RobotStudio</em>
 </div>
 
-<br>
+<br><br>
 
 <div align="center">
   <img src="Laboratorio No. 01 - Robótica Industrial ABB IRB140 y RobotStudio/imagenes/f1.png" alt="Resultado final - torta decorada" width="350px">
