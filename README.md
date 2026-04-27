@@ -69,7 +69,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 ### 👤 Integrante 2
 
 <div align="center">
-  <img src="Imágenes/ch.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/ch.jpeg" alt="Cristian Stiven Hoyos" style="border-radius: 50%; width: 180px;"><br>
 </div>
 
 | Campo | Información |
@@ -88,7 +88,7 @@ Este repositorio documenta el desarrollo de las actividades del curso de **Robó
 ### 👤 Integrante 3
 
 <div align="center">
-  <img src="Imágenes/zp.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br>
+  <img src="Fotos/zp.jpeg" alt="Jose Andres Zapata" style="border-radius: 50%; width: 180px;"><br>
 </div>
 
 | Campo | Información |
